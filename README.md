@@ -28,19 +28,19 @@
 这是该小程序的主页
 
 <p align="center" >
-<img src="/redhat123456/upPhysicalExercise/blob/main/1.png" width="100">
+<img src="http://github.com/redhat123456/upPhysicalExercise/blob/main/1.png" width="100">
 
 </p>
 
 
 <p align="center" >
 
-<img src="/redhat123456/upPhysicalExercise/blob/main/2.png" width="100">
+<img src="http://github.com/redhat123456/upPhysicalExercise/blob/main/2.png" width="100">
 </p>
 
 <p align="center" >
 
-<img src="/redhat123456/upPhysicalExercise/blob/main/3.png" width="100">
+<img src="http://github.com/redhat123456/upPhysicalExercise/blob/main/3.png" width="100">
 
 </p>
 
