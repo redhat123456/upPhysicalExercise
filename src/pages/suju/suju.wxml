@@ -1,0 +1,108 @@
+<!--pages/suju/suju.wxml-->
+
+<!--数据列表-->
+
+
+<!--增加新的记录-->
+<toubu></toubu>
+
+<view class="user_main">
+<!--项目简介-->
+
+<!--记录-->
+<view class="orders_wrap" >
+  <view class="orders_title">
+    <view wx:if="{{sv==01}}">身高和体重记录</view>
+      <view wx:elif="{{sv==02}}">BMI记录</view>
+      <view wx:elif="{{sv==03}}">体脂率记录</view>
+  </view>
+  <view>
+
+    <view class="first_tab">
+        <view class="goods_item"
+        wx:for="{{jihuaList}}"
+        wx:key="id">
+            <!-- 左侧 计划容器 -->
+            <view class="goods_img_wrap">
+              <view>{{item.riqi}}</view>
+            </view>
+            <!-- 右侧 完成量容器 -->
+            <view class="goods_info_wrap">
+              <view wx:if="{{sv==01}}">
+              <view class="goods_name">体重：{{item.shengao}}kg</view>
+              <view class="goods_price">身高：{{item.tizhong}}cm</view>
+
+              </view>
+      <view wx:elif="{{sv==02}}">
+        <view class="goods_name">BMI：{{item.BMI}}</view>
+
+
+      </view>
+      <view wx:elif="{{sv==03}}">
+        <view class="goods_name">体脂率：{{item.tizhi}}</view>
+
+      </view>
+              
+            </view>
+          </view>
+    </view>    
+
+<!-- 填写模块strat -->
+
+   <view wx:if="{{sv==01}}"><view class="orders_title">记录身高和体重</view>
+      
+</view>
+  
+ <!--这里写个if区别输入框-->
+ <view wx:if="{{sv==01}}">
+   
+<view class="account">
+  <view class="title">身高</view>
+  <view class="num">
+    <!-- bindinput 身高 -->
+    <input bindinput="shengaoInput" placeholder="请输入你想记录的身高" placeholder-style="color:#999;"/>
+  </view>
+  <view class="title">cm</view>
+</view>
+
+
+<view class="account">
+  <view class="title">体重：</view>
+  <view class="num">
+    <!-- bindinput 输入的体重 -->
+    <input bindinput="tizhongInput" placeholder="请输入你想记录的体重" placeholder-style="color:#999;"/>
+  </view>
+  <view class="title">kg</view>
+</view>
+<view class="hr"></view>
+<view class="hr"></view>
+
+    
+ </view>
+      <view wx:elif="{{sv==02}}">如果想看到最新的BMI数值，可以先填写身高体重再来看看！！！😘
+      </view>
+      <view wx:elif="{{sv==03}}">如果想看到最新的体脂率数值，可以先填写身高体重再来看看！！！😘</view>
+   <!--填写模块end-->
+  </view>
+</view>
+
+</view>
+
+<view class="btm_tool">
+    
+<view></view>
+
+
+    <view wx:if="{{sv==01}}" class="tool_item  btn_buy">
+      <view >记录身高和体重</view>
+      
+    
+    <button class="btn1" bindtap="suju" ></button>
+
+  </view>
+  
+
+  <view wx:elif="{{sv==02}}"></view>
+      <view wx:elif="{{sv==03}}"></view>
+
+</view>

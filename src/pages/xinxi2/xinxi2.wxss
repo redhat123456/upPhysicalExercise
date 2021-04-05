@@ -1,0 +1,56 @@
+/* pages/xinxi2/xinxi2.wxss */
+.user_main{
+  position: absolute;
+  width: 90%;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -40rpx;
+  padding-bottom: 100rpx;
+}
+
+.orders_wrap{
+  background-color: #fff;
+  margin-top: 40rpx;
+  }
+  .orders_title{
+  padding: +80rpx;
+  text-align: center;
+
+
+  }
+  .page{
+    background-color: #edece8;
+  }
+  
+  .zhengwen{
+    text-align: center;
+    font-size: 50rpx;
+
+  }
+
+  .orders_title1{
+    padding: 20rpx;
+    text-align: center;
+    font-size: 50rpx;
+
+    }
+    .zhengwen{
+      text-align: center;
+      font-size: 33rpx;
+
+    }
+    .picker{
+      text-align: center;
+      font-size: 50rpx;
+      border-bottom: 1rpx solid #ccc;
+
+    }
+    .btn{
+      
+  margin-top: 100rpx;
+  width: 80%;  
+  border-radius: 50rpx;
+  font-size: 30rpx;
+  color: #1e4631;
+
+    }

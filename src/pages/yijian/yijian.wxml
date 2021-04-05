@@ -1,0 +1,2 @@
+<!--pages/yijian/yijian.wxml-->
+<button open-type="feedback"  type="primary">意见反馈</button>

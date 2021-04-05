@@ -1,0 +1,32 @@
+<!--pages/jihua_list/jihua_list.wxml-->
+<!--监听自定义事件-->
+<Tabs tabs="{{tabs}}"  bindtabsItemChange="handletabsItemChange" >
+  <block wx:if="{{tabs[0].isActive}}">
+    
+    <view class="first_tab">
+        <navigator class="goods_item"
+        wx:for="{{jihuaList}}"
+        wx:key="jihua_id"
+        url="/pages/jihua21/jihua21?jv={{item.jvid}}"
+        >
+            <!-- 左侧 计划容器 -->
+            <view class="goods_img_wrap">
+              <image mode="widthFix" src="{{item.jihua_Img}}"></image>
+            </view>
+            <!-- 右侧 完成量容器 -->
+            <view class="goods_info_wrap">
+              <view class="goods_name">{{item.jihua_name}}</view>
+              <view class="goods_price">{{item.jieshao}}</view>
+            </view>
+          </navigator>
+    </view>    
+
+  </block>
+  <block wx:elif="{{tabs[1].isActive}}">未完待续</block>
+  <block wx:elif="{{tabs[2].isActive}}">未完待续</block>
+  <block wx:elif="{{tabs[3].isActive}}">未完待续</block>
+  <block wx:elif="{{tabs[4].isActive}}">未完待续</block>
+
+</Tabs>
+
+//P69 P70 记得来看

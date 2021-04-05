@@ -1,0 +1,29 @@
+<!-- 热门推荐、动画区Item -->
+<template name="jiefItem1">
+    <!-- List Item begin -->
+    <view class="content-list">
+    <navigator class="item" url="{{link}}">
+        <view class="top">
+        <view class="cover-img"
+        style="opacity: 1; background-image: url({{coverImg}});">
+        </view>
+        </view>
+        <view class="info">
+        <view class="title">{{title}}</view>
+        <view class="meta clearfix">
+            <view class="cell left">
+                <view class="bilibili-index-sprite bilibili-index-play">
+                  <image src="/images/play.png"></image>
+                </view>
+                <text>{{playNum}}</text>
+            </view>
+          
+        </view>
+        </view>
+    </navigator>
+    </view>
+    <!-- List Item end -->
+</template>
+
+
+

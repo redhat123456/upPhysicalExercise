@@ -1,0 +1,11 @@
+<!--pages/video/video.wxml   src="{{channels[currentIndex].playUrl}}"-->
+<!--视频播放器，属性设置参考：https://developers.weixin.qq.com/miniprogram/dev/component/video.html-->
+
+<!-- 
+  danmu-list:弹幕列表
+  enable-danmu:是否显示弹幕
+  danmu-btn:弹幕按钮
+  controls:是否显示视频控件，并没有什么用
+ -->
+
+<web-view src="http://121.196.145.60:3332/"></web-view>

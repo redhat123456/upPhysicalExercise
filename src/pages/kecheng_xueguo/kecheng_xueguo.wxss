@@ -1,0 +1,100 @@
+/* pages/kecheng_xueguo/kecheng_xueguo.wxss */
+
+page {
+  background-color: #edece8;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+
+
+.user_main{
+  position: absolute;
+  width: 90%;
+  left: 50%;
+  transform: translateX(-50%);
+  padding-bottom: 100rpx;
+}
+
+.orders_wrap{
+  background-color: #fff;
+  margin-top: 40rpx;
+  }
+  .orders_title{
+  padding: 20rpx;
+  border-bottom: 1rpx solid #ccc;
+  }
+  .order_content{
+    display: flex;
+  }
+  .order_content navigator{
+    padding: 0 0;
+  flex :1 ;
+  text-align: center;
+  width: 75rpx;
+  height: 150rpx;
+  }
+  .iconfont {
+    width: 50rpx;
+    height: 50rpx;
+    scale: 0.15;
+    padding-left: 40rpx;
+  }
+  .order_name{
+    padding-top: 20px;
+  }
+ 
+
+.btn{
+  margin-top: 40rpx;
+  margin-bottom: 40rpx;
+}
+
+
+.jihua{
+  width: 50rpx;
+  height: 50rpx;
+  scale: 0.15;
+  padding-left: 40rpx;
+}
+
+.order_jihua{
+  text-align: center;
+  padding-top: 20px;
+  height: 35px;
+  border-bottom: 1rpx solid #ccc;
+
+}
+
+
+
+.first_tab .goods_item {
+  display: flex;
+  border-bottom: 1px solid #ccc;
+}
+.first_tab .goods_item .goods_img_wrap {
+  flex: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.first_tab .goods_item .goods_img_wrap image {
+  width: 70%;
+}
+.first_tab .goods_item .goods_info_wrap {
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.first_tab .goods_item .goods_info_wrap .goods_name {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+.first_tab .goods_item .goods_info_wrap .goods_price {
+  color: var(--themeColor);
+  font-size: 32rpx;
+}

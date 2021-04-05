@@ -1,0 +1,90 @@
+{
+  "usingComponents": {
+    "toubu": "/components/toubu/toubu"
+  },
+  "pages": [
+    "pages/index/index",
+    "pages/dynamic/dynamic",
+    "pages/bilibili/bilibili",
+    "pages/job/job",
+    "pages/jihua/jihua",
+    "pages/xinxi2/xinxi2",
+    "pages/xinxi3/xinxi3",
+    "pages/xinxi4/xinxi4",
+    "pages/vedio/vedio",
+    "pages/login3/login3",
+    "pages/kefu/kefu",
+    "pages/tice/tice",
+    "pages/yijian/yijian",
+    "pages/jihua21/jihua21",
+    "pages/we/we",
+    "pages/tuijian/tuijian",
+    "pages/vedio_list/vedio_list",
+    "pages/paobu/paobu",
+    "pages/jihua_list/jihua_list",
+    "pages/jihua_anpai/jihua_anpai",
+    "pages/suju_yundong/suju_yundong",
+    "pages/suju_jiangkan/suju_jiangkan",
+    "pages/me_jihua/me_jihua",
+    "pages/kecheng_xueguo/kecheng_xueguo",
+    "pages/kecheng_shoucang/kecheng_shoucang",
+    "pages/suju/suju",
+    "pages/more/help",
+    "pages/more/about",
+    "pages/more/zhiwei",
+    "pages/core/news/index",
+    "pages/core/news/detail",
+    "pages/core/check/index",
+    "pages/core/check/list",
+    "pages/core/check/about",
+    "pages/core/set/today",
+    "pages/core/calendar/index",
+    "pages/search/table/today",
+    "pages/search/table/all",
+    "pages/search/room/index",
+    "pages/search/lib/index",
+    "pages/search/lib/detail",
+    "pages/search/exam/index",
+    "pages/search/id/index"
+    
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarTitleText": "up健身训练",
+    "navigationBarTextStyle": "white",
+    "navigationBarBackgroundColor": "#43B0D1"
+    
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "您的位置信息将用于获取位置信息"
+    }
+  },
+  "tabBar": {
+    "selectedColor": "#c30",
+    "backgroundColor": "#fff",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "images/home.png",
+        "selectedIconPath": "images/home2.png"
+      },
+      {
+        "pagePath": "pages/jihua/jihua",
+        "text": "计划",
+        "iconPath": "images/jihua.png",
+        "selectedIconPath": "images/jihua2.png"
+      },
+      {
+        "pagePath": "pages/dynamic/dynamic",
+        "text": "个人",
+        "iconPath": "images/human.png",
+        "selectedIconPath": "images/human2.png"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

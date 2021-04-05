@@ -1,0 +1,32 @@
+<!--pages/vedio_list/vedio_list.wxml-->
+<!--监听自定义事件-->
+<Tabs tabs="{{tabs}}"  bindtabsItemChange="handletabsItemChange" >
+  <block wx:if="{{tabs[0].isActive}}">
+    
+    <view class="first_tab">
+        <navigator class="goods_item"
+        wx:for="{{vedioList}}"
+        wx:key="vedio_id"
+        url="/pages/vedio/vedio?av={{item.avid}}"
+        >
+            <!-- 左侧 视频容器 -->
+            <view class="goods_img_wrap">
+              <image mode="widthFix" src="{{item.vedio_Img}}"></image>
+            </view>
+            <!-- 右侧 视频容器 -->
+            <view class="goods_info_wrap">
+              <view class="goods_name">{{item.vedio_name}}</view>
+              <view class="goods_price">播放量：{{item.vedio_playNum}}</view>
+            </view>
+          </navigator>
+    </view>    
+
+  </block>
+  <block wx:elif="{{tabs[1].isActive}}">未完待续</block>
+  <block wx:elif="{{tabs[2].isActive}}">未完待续</block>
+  <block wx:elif="{{tabs[3].isActive}}">未完待续</block>
+  <block wx:elif="{{tabs[4].isActive}}">未完待续</block>
+
+</Tabs>
+
+//P69 P70 记得来看

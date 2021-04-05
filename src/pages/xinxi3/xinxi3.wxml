@@ -1,0 +1,35 @@
+<!--pages/xinxi3/xinxi3.wxml-->
+<view class="user_main">
+<view class="orders_wrap" >
+  <view class="orders_title1">完善个人信息</view>
+  <view class="zhengwen">填写真实信息有助于热量计算及课程推荐</view>
+</view>
+
+<view class="orders_title">你的身高？</view>
+<view class="account">
+  <view class="title">身高：</view>
+  <view class="num">
+    <!-- bindinput 输入的时间 -->
+    <input bindinput="123" placeholder="例如：182" placeholder-style="color:#999;"/>
+  </view>
+  <view class="title">cm</view>
+</view>
+<view class="hr"></view>
+  <view class="orders_title">你的体重？</view>
+  <view class="account">
+  <view class="title">体重：</view>
+  <view class="num">
+    <!-- bindinput 输入的体重 -->
+    <input bindinput="tizhongInput" placeholder="例如：60" placeholder-style="color:#999;"/>
+  </view>
+  <view class="title">kg</view>
+</view>
+<view class="hr"></view>
+
+
+ <button bindtap="go_to1" class="btn" type="primary">上一步</button>
+  <button bindtap="go_to2" disabled="{{disabled}}" class="btn1" type="{{btnstate}}" >提交信息</button>
+
+</view>
+
+

@@ -1,0 +1,39 @@
+/* pages/xinxi4/xinxi4.wxss */
+.user_main{
+  position: absolute;
+  width: 90%;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -40rpx;
+  padding-bottom: 100rpx;
+}
+
+.orders_wrap{
+  background-color: #fff;
+  margin-top: 40rpx;
+  }
+  .orders_title1{
+  padding: +50rpx;
+  text-align: center;
+  font-size: 45rpx;
+  }
+  .zhengwen{
+    text-align: center;
+
+  }
+  .zhengwen1{
+    margin-bottom:  80rpx ;
+
+  }
+
+  .user_text{
+    margin-top:80rpx;
+  }
+  .text2{
+    margin-top:90rpx;
+ 
+  }
+  .btn{
+    margin-top: 80px;
+    
+  }

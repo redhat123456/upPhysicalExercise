@@ -1,0 +1,64 @@
+/* pages/tice/tice.wxss */
+.content{
+  margin-top: 80rpx;
+}
+
+.account{
+  display: flex;
+  flex-direction: row;
+  width: 90%;
+  padding-left: 40rpx;
+  padding-top: 40rpx;
+  padding-bottom: 20rpx;
+}
+
+.title{
+  font-weight: bold;
+  margin-right: 40rpx;
+}
+
+.hr{
+  width: 90%;
+  opacity: 0.5;
+  border: 2rpx solid #cccccc;
+  margin: 0 auto;
+}
+.btn{
+  margin-top: 40rpx;
+}
+
+.item{
+  display: flex;
+    flex-direction: row;
+justify-content: center;
+width: 50%;
+ 
+}
+.items{
+  display: flex;
+  width: 50%;
+  
+
+
+}
+.title1{
+  font-size: 25px;
+}
+.num1{
+  font-size: 22px;
+}
+.items2{
+  justify-content: center;
+  display:flexbox ;
+  flex-direction: row;
+}
+.item2{
+  
+  display: flex;
+}
+
+.zhengwen{
+  text-align: center;
+  font-size: 34rpx;
+
+}

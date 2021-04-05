@@ -1,0 +1,23 @@
+<!--pages/xinxi2/xinxi2.wxml-->
+<view class="user_main">
+<view class="orders_wrap" >
+  <view class="orders_title1">完善个人信息</view>
+  <view class="zhengwen">填写真实信息有助于热量计算及课程推荐</view>
+</view>
+<view class="orders_title">你的性别</view>
+<view class="section">
+  <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+    <view class="picker">
+      {{array[index]}}
+    </view>
+  </picker>
+</view>
+  <view class="orders_title">你的生日</view>
+  <picker mode="date" value="{{date}}" start="1900-09-01" end="2200-09-01" bindchange="bindDateChange">
+    <view class="picker">
+      {{date}}
+    </view>
+  </picker>
+  <button bindtap="go_to" class="btn" type="primary">继续</button>
+</view>
+

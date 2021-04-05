@@ -1,0 +1,9 @@
+<!--pages/jihua21/jihua21.wxml-->
+
+<toubu></toubu>
+<button class="btn" type="primary" bindtap="star">开始训练</button>
+
+
+
+
+<button class="btn" type="warn" bindtap="delete">删除计划</button>

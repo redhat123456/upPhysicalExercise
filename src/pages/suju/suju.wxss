@@ -1,0 +1,183 @@
+/* pages/suju/suju.wxss */
+page{
+  
+  padding-bottom: 90rpx;
+}
+.user_main{
+  position: absolute;
+  width: 90%;
+  left: 50%;
+  transform: translateX(-50%);
+  
+  padding-bottom: 100rpx;
+}
+
+.orders_wrap{
+  background-color: #fff;
+  margin-top: 40rpx;
+  }
+  .orders_title{
+  padding: 20rpx;
+  border-bottom: 1rpx solid #ccc;
+  }
+  .page{
+    background-color: #edece8;
+  }
+  .tu{
+    width: 100%;
+  }
+  .zhengwen{
+    text-align: center;
+    font-size: 50rpx;
+
+  }
+
+  .item{
+    display: flex;
+      flex-direction: row;
+     padding: 30rpx 0 20rpx ;
+      border-bottom: 1rpx solid #ccc;
+  }
+  .items{
+    display: flex;
+    justify-content: center;
+    padding-left: 150rpx;
+
+  }
+  .btn{
+    margin-top:50rpx ;
+  }
+
+
+
+
+
+
+  .btm_tool{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 90rpx;
+    background-color: #fff;
+    display: flex;
+  }
+
+  .tool_item{
+    flex: 1;
+    display: flex;
+    /*上下排列
+    flex-direction: column;
+      水平居中
+    justify-content: center;
+    */
+    align-items: center;
+    position: relative;
+
+  }
+.btn_cart{
+  align-items: center;
+  justify-content: center;
+  background-color: #ffa500;
+  color: #fff;
+  font-size: 30rpx;
+  font-weight: 600;
+
+}
+
+.btn_buy{
+  align-items: center;
+  justify-content: center;
+  background-color: #07C160;
+  color: #fff;
+  font-size: 30rpx;
+  font-weight: 600;
+}
+.btn1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+
+
+
+.jihua{
+  width: 50rpx;
+  height: 50rpx;
+  scale: 0.15;
+  padding-left: 40rpx;
+}
+
+.order_jihua{
+  text-align: center;
+  padding-top: 20px;
+  height: 35px;
+  border-bottom: 1rpx solid #ccc;
+
+}
+
+
+
+.first_tab .goods_item {
+  display: flex;
+  border-bottom: 1px solid #ccc;
+  margin-top: 20rpx ;
+  padding-bottom: 20rpx;
+}
+.first_tab .goods_item .goods_img_wrap {
+  flex: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.first_tab .goods_item .goods_img_wrap image {
+  width: 70%;
+}
+.first_tab .goods_item .goods_info_wrap {
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.first_tab .goods_item .goods_info_wrap .goods_name {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+.first_tab .goods_item .goods_info_wrap .goods_price {
+  color: var(--themeColor);
+  font-size: 32rpx;
+}
+
+
+
+
+.title{
+  font-weight: bold;
+  margin-right: 40rpx;
+}
+
+.hr{
+  width: 90%;
+  opacity: 0.5;
+  border: 2rpx solid #cccccc;
+  margin: 0 auto;
+}
+.account{
+  display: flex;
+  flex-direction: row;
+  width: 90%;
+  padding-left: 40rpx;
+  padding-top: 40rpx;
+  padding-bottom: 20rpx;
+}
+.orders_title{
+  padding: 30rpx;
+  text-align: center;
+
+
+  }

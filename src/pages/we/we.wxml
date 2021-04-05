@@ -1,0 +1,30 @@
+<view class="user_main">
+<!--项目简介-->
+<view class="orders_wrap" >
+  <view class="orders_title">项目简介</view>
+  <view>该开发项目为了开发出一款能够帮助大学生自主监督、系统协助监督的一款应用小程序，以达到帮助学生自主调理自己的生活的目的，实现自主学习和生活的根本目的。</view>
+</view>
+<view class="orders_title">项目负责人简介</view>
+  <view>金主爸爸兼项目负责人</view>
+  <image class="tu" mode="aspectFit" src="/images/xi.png"></image>
+<view class="orders_title">开发人员简介</view>
+  <view>前端工程师兼美工兼UI设计师：</view>
+  <view class="zhengwen">谭前程</view>
+  <image class="tu" mode="aspectFit" src="/images/i.png"></image>
+  <view>后端工程师</view>
+  <view class="zhengwen">陈皓</view>
+  <image class="tu" mode="aspectFit" src=""></image>
+
+  <view class="orders_title">开发者寄语</view>
+  <view>希望各位同学都能够好好通过这款小程序得到东西，无论是小程序的样式也好或者是这款小程序带给你身体上的变化，我都十分感谢你使用我的作品，你的使用就是对我莫大的支持，谢谢！！！</view>
+
+  <view class="orders_title">联系我们</view>
+  <view>习宇兴邮箱：154844255@qq.com</view>
+  <view>谭前程邮箱：1907065810@qq.com</view>
+  <view>陈皓邮箱：1907065810@qq.com</view>
+
+
+
+</view>
+
+

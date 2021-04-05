@@ -1,0 +1,45 @@
+/* pages/live/live.wxss */
+.channels {
+  background: argb(255, 255, 255, 112);
+}
+
+video {
+  width: 100%;
+}
+
+.channel_root {
+  display: flex;
+  flex-direction: row;
+  z-index: 2;
+  height: 225px;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  float: right;
+}
+
+.arrow {
+  width: 20px;
+  height: 30px;
+  margin-top: 130rpx;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 5px;
+  padding-right: 5px;
+  position: absolute;
+  z-index: 2;
+}
+
+.channel_root>.channel_scroll {
+  background: rgba(255, 255, 255, 0.5);
+  width: 130px;
+  height: 225px;
+}
+
+.channel_item {
+  margin-left: 15rpx;
+  margin-top: 15rpx
+}
+.active_item{
+  color: #ff0000;
+}

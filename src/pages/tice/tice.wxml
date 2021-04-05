@@ -1,0 +1,171 @@
+<wxs module="filters" src="../../utils/addmul.wxs"></wxs>
+<!--pages/tice/tice.wxml-->
+<!--第一部分：成绩-->
+<view class="account">
+  <view class="title1">成绩：</view>
+  <view class="num1">
+    <!-- bindinput 输入的时间 -->
+    {{filters.toFix2(zongfeng)}}
+  </view>
+
+</view>
+<view class="hr"></view>
+
+<view class="account">
+  <view class="title1">BMI：</view>
+  <view class="num1">
+    <!-- bindinput 输入的时间 -->
+    {{filters.toFix2(BMI)}}
+  </view>
+
+</view>
+<view class="hr"></view>
+
+<!--第二部分-->
+<view class="account">
+
+  <view class="title">性别：</view>
+  <radio-group data-id="{{item.value}}" bindchange="radioChange1">
+        <label class="weui-cell weui-check__label" wx:for="{{items}}" >
+
+          <view class="item">
+            <radio  value="{{item.value}}" checked="true"/>
+          
+          <view class="items">{{item.name}}</view></view>
+        </label>
+      </radio-group>
+</view>
+<view class="hr"></view>
+<view class="account">
+<view class="title">年级：</view>
+  <radio-group bindchange="radioChange2">
+        <label class="weui-cell weui-check__label" wx:for="{{items1}}" >
+
+          <view class="item2">
+            <radio value="{{item.value}}" checked="true"/>
+          
+          <view class="items2">{{item.name}}</view></view>
+        </label>
+      </radio-group>
+</view>
+<view class="hr"></view>
+
+<view class="account">
+  <view class="title">身高：</view>
+  <view class="num">
+    <!-- bindinput 输入的时间 -->
+    <input bindinput="shengaoInput" value="{{x11}}" placeholder="例如：178" placeholder-style="color:#999;"/>
+  </view>
+  <view class="title">厘米</view>
+</view>
+<view class="hr"></view>
+
+<view class="account">
+  <view class="title">体重：</view>
+  <view class="num">
+    <!-- bindinput 输入的时间 -->
+    <input bindinput="tizhongInput" value="{{x12}}" placeholder="例如：60" placeholder-style="color:#999;"/>
+  </view>
+  <view class="title">千克</view>
+</view>
+<view class="hr"></view>
+
+<view class="account">
+  <view class="title">肺活量：</view>
+  <view class="num">
+    <!-- bindinput 输入的时间 -->
+    <input bindinput="vitalcapacityInput" value="{{x13}}" placeholder="例如：4300" placeholder-style="color:#999;"/>
+  </view>
+  <view class="title">毫升</view>
+</view>
+<view class="hr"></view>
+
+
+<view class="account">
+  <view class="title">坐位前屈：</view>
+  <view class="num">
+    <!-- bindinput 输入的时间 -->
+    <input bindinput="zuoweiInput" value="{{x14}}" placeholder="例如：13.5" placeholder-style="color:#999;"/>
+  </view>
+  <view class="title">厘米</view>
+</view>
+<view class="hr"></view>
+
+<view class="account">
+  <view class="title">立定跳远：</view>
+  <view class="num">
+    <!-- bindinput 输入的时间 -->
+    <input bindinput="tiaoyuanInput" value="{{x15}}" placeholder="例如：200" placeholder-style="color:#999;"/>
+  </view>
+  <view class="title">厘米</view>
+</view>
+<view class="hr"></view>
+<view class="account">
+  <view class="title">50米跑：</view>
+  <view class="num">
+    <!-- bindinput 输入的时间 -->
+    <input bindinput="50" placeholder="例如：6.1" value="{{x17}}" placeholder-style="color:#999;"/>
+  </view>
+  <view class="title">秒</view>
+</view>
+<view class="hr"></view>
+
+
+<view wx:if="{{value1==11}}">
+<view class="account">
+  <view class="title">1000米跑：</view>
+  <view class="num">
+    <!-- bindinput 输入的时间 -->
+    <input bindinput="1000" value="{{x18}}" placeholder="例如：341" placeholder-style="color:#999;"/>
+  </view>
+  <view class="title">秒</view>
+</view>
+<view class="hr"></view>
+</view>
+
+<view wx:else>
+<view class="account">
+  <view class="title">800米跑：</view>
+  <view class="num">
+    <!-- bindinput 输入的时间 -->
+    <input bindinput="800" value="{{x19}}" placeholder="例如：341" placeholder-style="color:#999;"/>
+  </view>
+  <view class="title">秒</view>
+</view>
+<view class="hr"></view>
+</view>
+
+
+<view wx:if="{{value1==11}}">
+<view class="account">
+  <view class="title">引体向上：</view>
+  <view class="num">
+    <!-- bindinput 输入的时间 -->
+    <input bindinput="yinti" value="{{x20}}" placeholder="例如：20" placeholder-style="color:#999;"/>
+  </view>
+  <view class="title">个</view>
+</view>
+<view class="hr"></view>
+</view>
+
+
+<view wx:else>
+<view class="account">
+  <view class="title">仰卧起坐</view>
+  <view class="num">
+    <!-- bindinput 输入的时间 -->
+    <input bindinput="qizuo" value="{{x21}}" placeholder="例如：20" placeholder-style="color:#999;"/>
+  </view>
+  <view class="title">个</view>
+</view>
+<view class="hr"></view>
+</view>
+<view class="zhengwen">  如果想重新输入，请点击清零键(*^_^*)
+</view>
+
+<button class="btn" type="primary" bindtap="kong">清零</button>
+
+<button class="btn" type="primary" bindtap="fanghui">返回</button>
+
+
+

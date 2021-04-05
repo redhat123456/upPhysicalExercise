@@ -1,0 +1,30 @@
+<wxs module="filters" src="../../utils/addmul.wxs"></wxs>
+<!--pages/xinxi4/xinxi4.wxml-->
+<!--标题大字-->
+<view class="user_main">
+<view class="orders_wrap" >
+  <view class="orders_title1">健康</view>
+  <view class="zhengwen" wx:if="{{ BMI <=20}}">{{hua[0].neirong}}</view>
+  <view class="zhengwen" wx:elif="{{ BMI <=40 && BMI>20 }}">{{hua[1].neirong}}</view>
+  <view class="zhengwen" wx:elif="{{BMI<=60 && BMI>40}}">{{hua[2].neirong}}</view>
+  <view class="zhengwen" wx:elif="{{BMI<=80 && BMI>60}}">{{hua[3].neirong}}</view>
+
+  <!--数据可视化-->
+  <view class="user_text">
+    <view class="text1">
+      <view class="zhengwen1">BMI (是国际上用于衡量人体胖瘦程度的标准)</view>
+      <view class="progress-box">
+  <progress percent="{{filters.toFix(BMI)}}" show-info stroke-width="3"/>
+      <view class="zhengwen">你的BMI为{{filters.toFix2(BMI)}}</view>
+</view>
+  </view>
+
+    <view class="text2">
+      <view class="zhengwen1">体脂率 (是指人体内脂肪组织占体重的百分比) </view>
+        <progress active="true" percent="{{filters.toFix(tizhi)}}" show-info stroke-width="3"/>
+        <view class="zhengwen">你的体脂率为{{filters.toFix2(tizhi)}}</view>
+      </view>
+</view>
+<button class="btn" bindtap="go_to2" type="primary">确定</button>
+</view>
+</view>

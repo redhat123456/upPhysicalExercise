@@ -1,0 +1,133 @@
+<view class="header">
+    <view class="container hdCon">
+      <navigator open-type="switchTab" url="/pages/index/index" class="logo">
+        <image mode="heightFix" src="/images/guidianlogo2.jpg"> </image>
+      </navigator> 
+      <navigator  class="kefu">
+      <button class="btn" open-type="contact"></button>
+      <image mode="heightFix" src="/images/kefu.png"></image>
+      </navigator>
+    </view>
+</view>
+
+<view class="banner">
+  <image src="/images/bilibili/2b4505b54ff4efaab839632111dca73b.jpeg" 
+  mode="widthFix"></image>
+</view>
+
+<view class="biliBox">
+  <view class="biliBoxTit">
+    专业国际品牌
+  </view>
+ <view class="biliBoxConOne">
+      <view class="item" wx:for="{{5}}">
+         <image src="/images/bilibili/biliapp.jpg"></image>
+         <view>bilibili</view>
+      </view>
+ </view>
+  </view>
+
+<view class="biliBox">
+  <view class="biliBoxTit">
+    专业国际品牌
+  </view>
+  <view class="bilipsBoxCon">
+    <image src="https://ak.hypergryph.com/upload/images/20200721/04bb9cd4dd2c6917de3bdaa606aee6a5.jpg" 
+    mode="widthFix" class="pic"></image>
+      <view class="text">
+        <view>人像精修</view>
+        <view>商业广告片调色</view>
+        <view>商业海报级视觉精修</view>
+        <view>卡通人物制作</view>
+        <view>2.5D插画制作</view>
+        <view>3D文字视觉特效制作</view>
+        <view>平面广告创意</view>
+        <view>合成特效制作</view>
+      </view>
+  </view>
+</view>
+
+<view class="biliBox">
+  <view class="biliBoxTit">
+    专业国际品牌
+  </view>
+  <view class="bilipsBoxCon">
+    <image src="https://ak.hypergryph.com/upload/images/20200721/04bb9cd4dd2c6917de3bdaa606aee6a5.jpg" 
+    mode="widthFix" class="pic"></image>
+      <view class="text">
+        <view>人像精修</view>
+        <view>商业广告片调色</view>
+        <view>商业海报级视觉精修</view>
+        <view>卡通人物制作</view>
+        <view>2.5D插画制作</view>
+        <view>3D文字视觉特效制作</view>
+        <view>平面广告创意</view>
+        <view>合成特效制作</view>
+      </view>
+  </view>
+</view>
+
+<view class="biliBox">
+  <view class="biliBoxTit">
+    专业国际品牌
+  </view>
+  <view class="bilipsBoxCon">
+    <image src="https://ak.hypergryph.com/upload/images/20200721/04bb9cd4dd2c6917de3bdaa606aee6a5.jpg" 
+    mode="widthFix" class="pic"></image>
+      <view class="text">
+        <view>人像精修</view>
+        <view>商业广告片调色</view>
+        <view>商业海报级视觉精修</view>
+        <view>卡通人物制作</view>
+        <view>2.5D插画制作</view>
+        <view>3D文字视觉特效制作</view>
+        <view>平面广告创意</view>
+        <view>合成特效制作</view>
+      </view>
+  </view>
+</view>
+
+<view class="biliBox">
+  <view class="biliBoxTit">
+    专业国际品牌
+  </view>
+  <view class="bilipsBoxCon">
+    <image src="https://ak.hypergryph.com/upload/images/20200721/04bb9cd4dd2c6917de3bdaa606aee6a5.jpg" 
+    mode="widthFix" class="pic"></image>
+      <view class="text">
+        <view>人像精修</view>
+        <view>商业广告片调色</view>
+        <view>商业海报级视觉精修</view>
+        <view>卡通人物制作</view>
+        <view>2.5D插画制作</view>
+        <view>3D文字视觉特效制作</view>
+        <view>平面广告创意</view>
+        <view>合成特效制作</view>
+      </view>
+  </view>
+</view>
+
+<view class="biliBox">
+  <view class="biliBoxTit">
+    专业国际品牌
+  </view>
+  <view class="bilipsBoxCon">
+    <image src="https://ak.hypergryph.com/upload/images/20200721/04bb9cd4dd2c6917de3bdaa606aee6a5.jpg" 
+    mode="widthFix" class="pic"></image>
+      <view class="text">
+        <view>人像精修</view>
+        <view>商业广告片调色</view>
+        <view>商业海报级视觉精修</view>
+        <view>卡通人物制作</view>
+        <view>2.5D插画制作</view>
+        <view>3D文字视觉特效制作</view>
+        <view>平面广告创意</view>
+        <view>合成特效制作</view>
+      </view>
+  </view>
+</view>
+
+<view class="footer">
+  <image class="pic" mode="widthFix" src="/images/guidianlogo2.jpg"></image>
+  <view class="text">- 高端超叼大学 -</view>
+</view>

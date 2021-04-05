@@ -1,0 +1,11 @@
+<!--pages/tuijian/tuijian.wxml-->
+<view class="user_main">
+<!--项目简介-->
+<view class="orders_wrap" >
+  <view class="orders_title">推荐小程序</view>
+  <view class="zhengwen"> 扫描屏幕下方的二维码</view>
+  <image class="tu" mode="aspectFit" src="/images/weixin.png"></image>
+</view>
+</view>
+
+

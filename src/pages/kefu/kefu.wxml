@@ -1,0 +1,3 @@
+<!--pages/kefu/kefu.wxml-->
+
+<button class="btn" type="primary" open-type="contact">联系客服</button>
