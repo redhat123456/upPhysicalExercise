@@ -28,21 +28,19 @@
 这是该小程序的主页
 
 <p align="center" >
-
-![](https://7.dusays.com/2021/04/05/2987bc0463dba.png)
+<img src="https://github.com/redhat123456/upPhysicalExercise/blob/master/1.png" width="100">
 
 </p>
 
 
 <p align="center" >
 
-![](https://7.dusays.com/2021/04/05/a75a49111cec9.png)
-
+<img src="https://github.com/redhat123456/upPhysicalExercise/blob/master/2.png" width="100">
 </p>
 
 <p align="center" >
 
-![_O_1L_G_U_7__4DIHXML@Q7.png](https://7.dusays.com/2021/04/05/503beb13e8513.png)
+<img src="https://github.com/redhat123456/upPhysicalExercise/blob/master/3.png" width="100">
 
 </p>
 
