@@ -239,3 +239,8 @@ checkbox, radio{
   padding: 50rpx;
   line-height: 1;
 }
+
+.zhengwen{
+  margin-top: 30rpx;
+  text-align: center ;
+}

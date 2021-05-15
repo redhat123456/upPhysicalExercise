@@ -8,4 +8,20 @@
   controls:是否显示视频控件，并没有什么用
  -->
 
-<web-view src="http://121.196.145.60:3332/"></web-view>
+<!--pages/live/live.wxml   src="{{channels[currentIndex].playUrl}}"-->
+<!--视频播放器，属性设置参考：https://developers.weixin.qq.com/miniprogram/dev/component/video.html-->
+<view>
+	<video show-mute-btn="{{true}}" 
+	src="{{url}}"
+  picture-in-picture-mode="{{['push', 'pop']}}" show-progress="{{true}}" autoplay="{{true}}" show-casting-button="{{true}}" show-fullscreen-btn="{{true}}" show-screen-lock-button="{{true}}" enable-auto-rotation="{{true}}" enable-progress-gesture="{{false}}" bindenterpictureinpicture='bindVideoEnterPictureInPicture' bindleavepictureinpicture='bindVideoLeavePictureInPicture' bindfullscreenchange="screenChange"
+  danmu-list="{{danmuList}}"
+    controls></video>
+
+	<image src="{{arrowImg}}" style="right:{{showChannels?130:0}}px" bindtap="onArrowClick" class="arrow"></image>
+
+	<!--频道列表，全屏时video层级最高，显示不了其他组件，所以全屏时暂不能显示频道列表-->
+	<view class="channel_root">
+	
+	</view>
+</view>
+

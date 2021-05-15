@@ -5,14 +5,32 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    yundong:[]
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
+  get_run:function(){
+    var that=this;
+  wx.request({
+    url:getApp().globalData.myurl +'/run/getDataList/'+ wx.getStorageSync("openid"),
+    data:{},
+    method:"GET",
+    success:function(res){
+      console.log(res);
+      var list=res.data.data.list;
+      console.log(list);
+      that.setData({
+        yundong:list
+      })
+    }
+  })
+  },
 
+  
+  onLoad: function (options) {
+  this.get_run();
   },
 
   /**

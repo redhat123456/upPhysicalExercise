@@ -12,7 +12,9 @@ Page({
 
   },
   go_to: function() {
-    var mytime=Number(myDate.getFullYear());
+    var timestamp = Date.parse( new Date()); 
+    var date = new Date(timestamp); 
+    var mytime=Number(date.getFullYear());
     console.log(mytime);
     var nian=(this.data.date).substring(0,4);
     console.log(nian.substring(0,4));
@@ -21,7 +23,7 @@ Page({
     var tizhi = (0.23 * (nian2)) -5.4 -(10.8* (this.data.index) );
     console.log(tizhi);
     wx.request({
-      url: 'app.globalData.myurl/user/updateUser',
+      url: getApp().globalData.myurl +'/user/updateUser',
       data: {
         birthday: this.data.date +' 00:00:00',
         openid :  wx.getStorageSync("openid"),

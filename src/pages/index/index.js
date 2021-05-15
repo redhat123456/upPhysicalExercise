@@ -8,122 +8,54 @@ Page({
    * 页面的初始数据
    */
   data: {
-    imgUrls: [
-      {
-         link:'/pages/video/video',
-         url:'http://i0.hdslb.com/bfs/live/new_room_cover/654c27b2b18deacde0f080ea80d8d6e6e2ab73a5.jpg@206w_116h_1c_100q.webp'
-      },{
-         link:'/pages/video/video',
-         url:'http://i0.hdslb.com/bfs/live/new_room_cover/654c27b2b18deacde0f080ea80d8d6e6e2ab73a5.jpg@206w_116h_1c_100q.webp'
-      },{
-         link:'/pages/video/video',
-         url:'http://i0.hdslb.com/bfs/live/new_room_cover/654c27b2b18deacde0f080ea80d8d6e6e2ab73a5.jpg@206w_116h_1c_100q.webp'
-      },{
-         link:'/pages/video/video',
-         url:'http://i0.hdslb.com/bfs/live/new_room_cover/654c27b2b18deacde0f080ea80d8d6e6e2ab73a5.jpg@206w_116h_1c_100q.webp'
-      }
-   ],
+    imgUrls: [],
    indicatorDots: true,
    autoplay: true,
    interval: 5000,
    duration: 1000,
    userInfo: {},
    currentId: 1001,
-   hotList: [
-    {
-      coverImg: 'http://i0.hdslb.com/bfs/live/new_room_cover/654c27b2b18deacde0f080ea80d8d6e6e2ab73a5.jpg@206w_116h_1c_100q.webp',
-      title: 'bilibili Moe 2017 动画角色人气大赏国产动画场宣传PV',
-      playNum: '21.3万',
-      commentNum: '8638',
-      avid: 'av1',
-      link: '/pages/vedio/vedio?av=1'
+   hotList: [],
+   List1: [],
+   List2: [],
+   List3: [],
+   List4: [],
+   List5: [],
+   List6: [],
+   List7: [],
+   List8: [],
 
-    },
-    {
-      coverImg: 'http://i0.hdslb.com/bfs/live/new_room_cover/654c27b2b18deacde0f080ea80d8d6e6e2ab73a5.jpg@206w_116h_1c_100q.webp',
-      title: '【1月】小林家的龙女仆 10',
-      playNum: '403.7万',
-      commentNum: '14.0万',
-      avid: 'av2',
-      link: '/pages/vedio/vedio?av=2'
-
-    },
-    {
-      coverImg: 'http://i0.hdslb.com/bfs/live/new_room_cover/654c27b2b18deacde0f080ea80d8d6e6e2ab73a5.jpg@206w_116h_1c_100q.webp',
-      title: '【7月】Fate/Apocrypha 01【独家正版】',
-      playNum: '440.7万',
-      commentNum: '12.3万',
-      avid: 'av3',
-      link: '/pages/vedio/vedio?av=3'
-
-    },
-    {
-      coverImg: 'http://i0.hdslb.com/bfs/live/new_room_cover/654c27b2b18deacde0f080ea80d8d6e6e2ab73a5.jpg@206w_116h_1c_100q.webp',
-      title: '【Fate全系列】英灵乱斗: 夺回未来的战争「Grand Order」',
-      playNum: '74.9万',
-      commentNum: '9773',
-      avid: 'av4',
-      link: '/pages/vedio/vedio?av=4'
-    }
-  ],
-  animationList: [
-    {
-      coverImg: 'http://i0.hdslb.com/bfs/live/new_room_cover/654c27b2b18deacde0f080ea80d8d6e6e2ab73a5.jpg@206w_116h_1c_100q.webp',
-      title: '【乐正绫】《华夏之章》【小旭PRO】【绛舞乱丸】',
-      playNum: '4.7万',
-      commentNum: '977',
-      avid: 'av15',
-      link: '/pages/vedio/vedio?av=15'
-    },
-    {
-      coverImg: 'http://i0.hdslb.com/bfs/live/new_room_cover/654c27b2b18deacde0f080ea80d8d6e6e2ab73a5.jpg@206w_116h_1c_100q.webp',
-      title: '【斗图歌】装逼不如斗图',
-      playNum: '4.7万',
-      commentNum: '977',
-      avid: 'av16',
-      link: '/pages/vedio/vedio?av=16'
-
-    },
-    {
-      coverImg: 'http://i0.hdslb.com/bfs/live/new_room_cover/654c27b2b18deacde0f080ea80d8d6e6e2ab73a5.jpg@206w_116h_1c_100q.webp',
-      title: '【胖胖球】【双子星】【獒龙】荒岛 - El transcurrir de las horas',
-      playNum: '4.7万',
-      commentNum: '977',
-      avid: 'av17',
-      link: '/pages/vedio/vedio?av=17'
-
-    },
-    {
-      coverImg: 'http://i0.hdslb.com/bfs/live/new_room_cover/654c27b2b18deacde0f080ea80d8d6e6e2ab73a5.jpg@206w_116h_1c_100q.webp',
-      title: '撩人净土系列【红菱歌舞伎初音】极乐净土【大神犬PV付】MME配布',
-      playNum: '4.7万',
-      commentNum: '977',
-      avid: 'av18',
-      link: '/pages/vedio/vedio?av=18'
-
-    }
-  ],
   jihuaList:[
     {
-      jihua_Img:'/images/dianshi.jpg',
-      jihua_name:'12分钟快速热身跑',
-      jieshao:'2周 · 初级 · 考前',
-      jvid:'jv0',
+      id:0,
+      cover:'http://121.196.145.60:3332/1.jpg',
+      name:'新手入门',
+      jieshao:'30分钟 · 小白 · 基础',
+      url:'新手入门',
 
     },
     {
-      jihua_Img:'/images/dianshi.jpg',
-      jihua_name:'7分钟瘦脸瘦下巴大当家u的规范化收到回复就放',
-      jieshao:'2周 · 初级 · 考前',
-      jvid:'av004',
-
+      id:0,
+      cover:'http://121.196.145.60:3332/2.jpg',
+      name:'每天30分钟系列',
+      jieshao:'30分钟 · 初级 · 全身',
+      url:'30分钟系列',
 
     },
     {
-      jihua_Img:'/images/dianshi.jpg',
-      jihua_name:'7分钟瘦脸瘦下巴大当家u的规范化收到回复就放',
-      jieshao:'2周 · 初级 · 考前',
-      jvid:'av004',
+      id:0,
+      cover:'http://121.196.145.60:3332/3.jpg',
+      name:'每天45分钟系列',
+      jieshao:'45分钟 · 进阶 · 锻炼',
+      url:'45分钟系列',
+
+    },
+    {
+      id:0,
+      cover:'http://121.196.145.60:3333/5.jpg',
+      name:'12分钟快速热身跑',
+      jieshao:'12分钟 · 初级 · 考前',
+      url:'跑步训练',
 
     },
     ],
@@ -138,8 +70,6 @@ Page({
 
     let day =  util.formatTime(new Date()) ;
 
-
-    
     let theday=day;  
     console.log(theday);
     this.setData({
@@ -147,38 +77,268 @@ Page({
     })
   },
   
-  getRequest:function(){
+  getRequest_lun:function () {
      //发送网络请求获取列表
-     wx.request({
-      url: '',
-      data:{
-      num:5
-      },
-      success:res=>{
-         res.data.forEach(item=>{
-           var time=item.posttime*1000
-           var d=new Date(time);
-           var year=d.getFullYear();
-           var month=(d.getMonth()+1)<10 ? "0"+(d.getMonth()+1) :(d.getMonth()+1);
-           var day=(d.getDate())<10 ? "0"+(d.getDate()+1) :(d.getDate()+1);
-           var posttime=year+"-"+month+"-"+day
-           item.posttime=posttime
-         })
 
+     console.log('lun');
+     var that=this;
+
+     let myurl= getApp().globalData.myurl+'/video/getCarousel';
+
+     console.log(myurl);
+     wx.request({
+      url: myurl,
+      data:{},
+      method:'GET',
+      success:function(res){
+        console.log(res.data.data);
+        console.log(res.data.data.videoList);
+        let list = res.data.data.videoList;
+        for (let i = 0; i < list.length; i++) {
+          console.log(i, list[i]);
+          list[i].url=escape(list[i].url)
+          console.log(i, list[i]);
+        }
+
+        that.setData({
+          imgUrls:list
+        })
         
-         this.setData({
-           resData:res.data
-         })
       }
+
     })
   },
 
-  /**
+  getRequest_hot:function () {
+    //发送网络请求获取列表
+
+    console.log('hot');
+    var that=this;
+
+    let myurl= getApp().globalData.myurl+'/video/getHot';
+
+    console.log(myurl);
+    wx.request({
+     url: myurl,
+     data:{},
+     method:'GET',
+     success:function(res){
+       console.log(res.data.data);
+       console.log(res.data.data.videoList);
+       var list=res.data.data.videoList;
+       that.setData({
+        hotList:list
+       })
+       
+     }
+
+   })
+ },
+
+ getRequest_2:function(){
+  console.log('2');
+  var that=this;
+
+  let myurl= getApp().globalData.myurl+'/video/getMain/背部训练';
+
+  console.log(myurl);
+  wx.request({
+   url: myurl,
+   data:{
+   },
+   header: {
+    'content-type': 'application/x-www-form-urlencoded;charset=utf-8',
+   },
+   method:'GET',
+   success:function(res){
+     console.log(res.data);
+     console.log(res.data.videoList);
+     var list=res.data.data.videoList;
+     that.setData({
+      List1:list
+     })
+     
+   }
+
+ })
+ },
+ getRequest_3:function(){
+  console.log('3');
+  var that=this;
+
+  let myurl= getApp().globalData.myurl+'/video/getMain/臀腿训练';
+
+  console.log(myurl);
+  wx.request({
+   url: myurl,
+   data:{},
+   method:'GET',
+   success:function(res){
+     console.log(res.data.data);
+     console.log(res.data.data.videoList);
+     var list=res.data.data.videoList;
+     that.setData({
+      List2:list
+     })
+     
+   }
+
+ })
+ },
+ getRequest_4:function(){
+  console.log('4');
+  var that=this;
+
+  let myurl= getApp().globalData.myurl+'/video/getMain/徒手训练';
+
+  console.log(myurl);
+  wx.request({
+   url: myurl,
+   data:{},
+   method:'GET',
+   success:function(res){
+     console.log(res.data.data);
+     console.log(res.data.data.videoList);
+     var list=res.data.data.videoList;
+     that.setData({
+      List3:list
+     })
+     
+   }
+
+ })
+ },
+ getRequest_5:function(){
+  console.log('5');
+  var that=this;
+
+  let myurl= getApp().globalData.myurl+'/video/getMain/体态矫正';
+
+  console.log(myurl);
+  wx.request({
+   url: myurl,
+   data:{},
+   method:'GET',
+   success:function(res){
+     console.log(res.data.data);
+     console.log(res.data.data.videoList);
+     var list=res.data.data.videoList;
+     that.setData({
+      List4:list
+     })
+     
+   }
+
+ })
+ },
+ getRequest_6:function(){
+  console.log('6');
+  var that=this;
+
+  let myurl= getApp().globalData.myurl+'/video/getMain/手臂训练';
+
+  console.log(myurl);
+  wx.request({
+   url: myurl,
+   data:{},
+   method:'GET',
+   success:function(res){
+     console.log(res.data.data);
+     console.log(res.data.data.videoList);
+     var list=res.data.data.videoList;
+     that.setData({
+      List5:list
+     })
+     
+   }
+
+ })
+ },
+ getRequest_7:function(){
+  console.log('7');
+  var that=this;
+
+  let myurl= getApp().globalData.myurl+'/video/getMain/肩部训练';
+
+  console.log(myurl);
+  wx.request({
+   url: myurl,
+   data:{},
+   method:'GET',
+   success:function(res){
+     console.log(res.data.data);
+     console.log(res.data.data.videoList);
+     var list=res.data.data.videoList;
+     that.setData({
+      List6:list
+     })
+     
+   }
+
+ })
+ },
+ getRequest_8:function(){
+  console.log('8');
+  var that=this;
+
+  let myurl= getApp().globalData.myurl+'/video/getMain/腹部训练';
+
+  console.log(myurl);
+  wx.request({
+   url: myurl,
+   data:{},
+   method:'GET',
+   success:function(res){
+     console.log(res.data.data);
+     console.log(res.data.data.videoList);
+     var list=res.data.data.videoList;
+     that.setData({
+      List7:list
+     })
+     
+   }
+
+ })
+ },
+ getRequest_9:function(){
+  console.log('9');
+  var that=this;
+
+  let myurl= getApp().globalData.myurl+'/video/getMain/胸部训练';
+
+  console.log(myurl);
+  wx.request({
+   url: myurl,
+   data:{},
+   method:'GET',
+   success:function(res){
+     console.log(res.data.data);
+     console.log(res.data.data.videoList);
+     var list=res.data.data.videoList;
+     that.setData({
+      List8:list
+     })
+     
+   }
+
+ })
+ },
+
+ /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-   this.getRequest();
+   this.getRequest_lun();
    this.getToday();
+   this.getRequest_hot();
+   this.getRequest_2();
+   this.getRequest_3();
+   this.getRequest_4();
+   this.getRequest_5();
+   this.getRequest_6();
+   this.getRequest_7();
+   this.getRequest_8();
+   this.getRequest_9();   
   },
 
 
@@ -194,13 +354,10 @@ Page({
    */
   onShow: function () {
     
+   
   },
 
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-  },
+  
 
   /**
    * 生命周期函数--监听页面卸载

@@ -2,10 +2,13 @@
 
 <toubu></toubu>
 <view class="head" style="flex-direction:row;">
-    <button bindtap="openLocation">打开位置</button>
+    <button bindtap="openLocation">查看当前位置</button>
     <button bindtap="starRun">开始跑步</button>
     <button bindtap="stopRun">暂停跑步</button>
     <button type="warn" bindtap="stopRun2" class="btn">结束跑步</button>
+    
+    <view class="zhengwen">⚠️注意:点击结束后，将会上传数据
+    </view>
 
     <text>\n里程数：{{meters}}km</text>
     <text>\n\n时间：{{time}}</text>

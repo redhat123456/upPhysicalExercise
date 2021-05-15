@@ -13,15 +13,15 @@
     "miniprogram": {
       "list": [
         {
-          "name": "pages/index/index",
-          "pathName": "pages/index/index",
+          "name": "pages/jihua21/jihua21",
+          "pathName": "pages/jihua21/jihua21",
           "query": "",
           "scene": null
         },
         {
           "name": "pages/jihua/jihua",
           "pathName": "pages/jihua/jihua",
-          "query": "yid=1",
+          "query": "sv=01",
           "scene": null
         }
       ]

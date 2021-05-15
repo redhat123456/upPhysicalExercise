@@ -1,42 +1,15 @@
 // pages/suju/suju.js
 var app = getApp()
+var util = require('../../utils/util.js');
 Page({
 
   shengao:'',
   tizhong:'',
-
+  age:'',
+  sex:'',
   data: {
     sv:'01',
-
-    jihuaList:[
-      {
-        id:'01',
-        riqi:'2021-03-04',
-        tizhong:'62',
-        shengao:'183',
-        BMI:'18.65',
-        tizhi:'17.45',
-  
-      },
-      {
-        id:'02',
-        riqi:'2021-03-04',
-        tizhong:'62',
-        shengao:'183',
-        BMI:'18.65',
-        tizhi:'17.45',
-  
-      },  {
-        id:'03',
-
-        riqi:'2021-03-04',
-        tizhong:'62',
-        shengao:'183',
-        BMI:'18.65',
-        tizhi:'17.45',
-  
-      },
-      ]
+    jiangkan:[],
   },
 
   /**
@@ -45,36 +18,120 @@ Page({
   onLoad: function (options) {
     //测试app.globalData.myurl是否能用
     //console.log(app.globalData.myurl);
-    this.setData({
+    var that = this;
+    that.setData({
       sv:options.sv
     })
+  this.show();
+  this.get_age();
+
+  },
+   get_age:function(res){
+     var that=this;
+   wx.request({
+     url: getApp().globalData.myurl + '/user/getUserById/'+wx.getStorageSync("openid"),
+     data:{},
+     method:"GET",
+     success:function(res){
+       console.log(res);
+       var sex=res.data.data.user.sex;
+       that.setData({
+         sex:sex
+       })
+     }
+   })
+   wx.request({
+     url: getApp().globalData.myurl + '/user/getAge/'+wx.getStorageSync("openid"),
+     data:{},
+     method:"GET",
+     success:function(res){
+       console.log(res);
+       var age=res.data.data.age
+       that.setData({
+        age:age
+      })
+     },
+     fail:function(res){
+      
+        wx.showToast({
+          title: '请完善个人信息',
+          icon: 'success',
+          duration: 3000 ,
+          
+        })
+        wx.navigateTo({
+          url: '../xinxi2/xinxi2?'
+        })
+     }
+   })
+   },
+
+
+  show:function(res){
+    var that=this;
+    var myurl=getApp().globalData.myurl+'/body/getDataList/'+wx.getStorageSync("openid");
+    console.log(myurl);
     wx.request({
-      url: 'app.globalData.myurl',
-      data:{
-        sv: this.data.sv,
-        openid: wx.getStorageSync("openid"),
-      },
-      method:"POST",
+      url: myurl,
+      data:{},
+      method:"GET",
       success:function(res){
-        
+        console.log(res);
+        console.log(res.data.data.list);
+        that.setData({
+          jiangkan:res.data.data.list
+        })
 
         
       }
     })
-
   },
 
   shengaoInput:function(e){
-
+    var value = e.detail.value
+    console.log(value);
     this.setData({
-
+        shengao:value
     })
   },
   tizhongInput:function(e){
-
+    var value = e.detail.value
+    console.log(value);
+    this.setData({
+        tizhong:value
+    })
   },
-  su:function(){
 
+  suju1:function(e){
+
+    var BMI = 10000*( this.data.tizhong / (this.data.shengao * this.data.shengao)) ;
+    console.log(BMI);
+    var tizhi = Number(BMI) + 0.23*Number(this.data.age)-5.4-10.8*Number(this.data.sex);
+    console.log(tizhi);
+    
+   wx.request({
+     url: getApp().globalData.myurl+'/body/addBodyData',
+     data:{
+      "bmi": BMI,
+      "createtime": "",
+      "height": this.data.shengao,
+      "id": "",
+      "openid": wx.getStorageSync("openid"),
+      "rate": tizhi,
+      "updatetime": "",
+      "weight": this.data.tizhong
+     },
+     method:"POST",
+     success:function(e){
+      wx.showToast({
+        title: '记录成功',
+        icon: 'success',
+        duration: 3000 ,
+        
+      })
+      
+     }
+   })
   },
 
   /**

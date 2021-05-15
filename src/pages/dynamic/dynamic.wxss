@@ -1,6 +1,6 @@
 /* pages/dynamic/dynamic.wxss */
 page{
-  background-color: #edece8;
+  background-color: #ccc;
 }
 
 
@@ -64,25 +64,10 @@ text-align: center;
   top: -40rpx;
   padding-bottom: 100rpx;
 }
-.history_wrap{
-  background-color: #fff;
-  display: flex;
 
-  
-}
-.history_wrap navigator {
-      flex: 1;
-      text-align: center;
-      padding: 10rpx 0;
 
-}
-.his_num {
-  color: #E55952 ;
-}
 
-.history_wrap{
 
-}
 .orders_wrap{
 background-color: #fff;
 margin-top: 40rpx;

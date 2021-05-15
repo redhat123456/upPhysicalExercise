@@ -5,7 +5,7 @@
 
   <view class="view_3">
     <navigator url="/pages/suju/suju?sv=01"  class="list-item">
-      <image class="item-image" src=""></image>
+      <image class="item-image" src="/images/9.png"></image>
       <text class="item-text">我的身高和体重</text>
       <image class="image-jiantou" src="/images/duo.png"></image>
     </navigator>      
@@ -14,7 +14,7 @@
     <view class="line"></view>
 
     <navigator url="/pages/suju/suju?sv=02" class="list-item">
-      <image class="item-image" src=""></image>
+      <image class="item-image" src="/images/10.png"></image>
       <text class="item-text">我的BMI</text>
       <image class="image-jiantou" src="/images/duo.png"></image>
     </navigator>
@@ -24,7 +24,7 @@
     
 
     <navigator url="/pages/suju/suju?sv=03" class="list-item">
-      <image class="item-image" src=""></image>
+      <image class="item-image" src="/images/11.png"></image>
       <text class="item-text">我的体脂率</text>
       <image class="image-jiantou" src="/images/duo.png"></image>
     </navigator>

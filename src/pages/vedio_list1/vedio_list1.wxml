@@ -1,0 +1,37 @@
+<!--pages/vedio_list/vedio_list.wxml-->
+<!--监听自定义事件-->
+
+<block >
+  <Tabs tabs="{{tabs1}}"  bindtabsItemChange="handletabsItemChange" >
+    <block >
+    
+    <view class="first_tab">
+        <navigator class="goods_item"
+        wx:for="{{vedio_List}}"
+        wx:key="id"
+        wx:if="{{item.planId==id}}"
+        url="/pages/vedio/vedio?url={{item.url}}"
+        >
+
+            <!-- 左侧 视频容器 -->
+            <view class="goods_img_wrap">
+              <image mode="widthFix" src="{{item.cover}}"></image>
+            </view>
+            <!-- 右侧 视频容器 -->
+            <view class="goods_info_wrap">
+              <view class="goods_name">{{item.name}}</view>
+              <view class="goods_price">播放量：{{item.count}}</view>
+            </view>
+          </navigator>
+    </view>    
+
+  </block>
+
+  </Tabs>
+  <view class="zhengwen">
+    这是该计划的所有视频，将这些视频看完!!!😀😀
+  </view>
+   </block>
+
+
+

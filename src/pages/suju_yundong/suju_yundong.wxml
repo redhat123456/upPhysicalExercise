@@ -1,2 +1,31 @@
 <!--pages/suju_yundong/suju_yundong.wxml-->
-<text>pages/suju_yundong/suju_yundong.wxml</text>
+<toubu></toubu>
+
+<view class="user_main">
+<!--项目简介-->
+
+<!--记录-->
+<view class="orders_wrap" >
+  <view class="orders_title">
+    运动数据
+  </view>
+</view>
+<view class="first_tab">
+        <view class="goods_item"
+        wx:for="{{yundong}}"
+        wx:key="id">
+            <!-- 左侧 计划容器 -->
+            <view class="goods_img_wrap">
+              <view>{{item.updatetime}}</view>
+            </view>
+            <!-- 右侧 完成量容器 -->
+            <view class="goods_info_wrap">
+              
+              <view class="goods_price">运动里程数：{{item.data}} 公里</view>
+              <view class="goods_price">运动时长：{{item.date}} </view>
+            </view>
+          </view>
+    </view>    
+
+<view class="zhengwen">如果没有运动数据，可以先去制定一个跑步类的计划再来查询哦~~😃</view>
+</view>

@@ -1,32 +1,84 @@
 <!--pages/vedio_list/vedio_list.wxml-->
 <!--监听自定义事件-->
-<Tabs tabs="{{tabs}}"  bindtabsItemChange="handletabsItemChange" >
-  <block wx:if="{{tabs[0].isActive}}">
+
+<block wx:if="{{vid=='01'}}">
+  <Tabs tabs="{{tabs1}}"  bindtabsItemChange="handletabsItemChange" >
+    <block wx:if="{{tabs[0].isActive}}">
     
     <view class="first_tab">
         <navigator class="goods_item"
-        wx:for="{{vedioList}}"
+        wx:for="{{vedio_List2}}"
         wx:key="vedio_id"
-        url="/pages/vedio/vedio?av={{item.avid}}"
+        url="/pages/vedio/vedio?count={{item.count}}&id={{item.videoId}}&url={{item.url}}"
         >
             <!-- 左侧 视频容器 -->
             <view class="goods_img_wrap">
-              <image mode="widthFix" src="{{item.vedio_Img}}"></image>
+              <image mode="widthFix" src="{{item.cover}}"></image>
             </view>
             <!-- 右侧 视频容器 -->
             <view class="goods_info_wrap">
-              <view class="goods_name">{{item.vedio_name}}</view>
-              <view class="goods_price">播放量：{{item.vedio_playNum}}</view>
+              <view class="goods_name">{{item.name}}</view>
+              <view class="goods_price">播放量：{{item.count}}</view>
             </view>
           </navigator>
     </view>    
 
   </block>
-  <block wx:elif="{{tabs[1].isActive}}">未完待续</block>
-  <block wx:elif="{{tabs[2].isActive}}">未完待续</block>
-  <block wx:elif="{{tabs[3].isActive}}">未完待续</block>
-  <block wx:elif="{{tabs[4].isActive}}">未完待续</block>
+
+  </Tabs>
+   </block>
+
+<block wx:else>
+<Tabs tabs="{{tabs}}"  bindtabsItemChange="handletabsItemChange" >
+  <block wx:if="{{tabs[0].isActive}}">
+    
+    <view class="first_tab">
+        <navigator class="goods_item"
+        wx:for="{{vedio_List}}"
+        wx:key="vedio_id"
+        url="/pages/vedio/vedio?count={{item.count}}&id={{item.videoId}}&url={{item.url}}"
+        >
+            <!-- 左侧 视频容器 -->
+            <view class="goods_img_wrap">
+              <image mode="widthFix" src="{{item.cover}}"></image>
+            </view>
+            <!-- 右侧 视频容器 -->
+            <view class="goods_info_wrap">
+              <view class="goods_name">{{item.name}}</view>
+              <view class="goods_price">播放量：{{item.count}}</view>
+            </view>
+          </navigator>
+    </view>    
+
+  </block>
+
+  <block wx:else>
+    
+    <view class="first_tab">
+        <navigator class="goods_item"
+        wx:for="{{vedio_List1}}"
+        wx:key="vedio_id"
+        url="/pages/vedio/vedio?count={{item.count}}&id={{item.videoId}}&url={{item.url}}"
+        >
+            <!-- 左侧 视频容器 -->
+            <view class="goods_img_wrap">
+              <image mode="widthFix" src="{{item.cover}}"></image>
+            </view>
+            <!-- 右侧 视频容器 -->
+            <view class="goods_info_wrap">
+              <view class="goods_name">{{item.name}}</view>
+              <view class="goods_price">播放量：
+              <view wx:if="{{item.conut==null}}"> {{0}} </view>
+              <view wx:else>{{item.count}}</view>  
+              
+              </view>
+            </view>
+          </navigator>
+    </view>    
+
+  </block>
 
 </Tabs>
 
-//P69 P70 记得来看
+</block>
+

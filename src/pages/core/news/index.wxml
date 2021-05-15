@@ -1,7 +1,7 @@
 <view class="page__hd">
   <image class="weui-media-box__thumb" src="/images/core/news.png" />
-  <view class="page__title">文经新闻</view>
-  <view class="page__desc">文经的动态，你我看得见</view>
+  <view class="page__title">UP新闻</view>
+  <view class="page__desc">UP的动态，你我看得见</view>
 </view>
 <view class="weui-panel__bd" wx:if="{{newsData}}">
   <navigator url="/pages/core/news/detail?id={{news['id']}}" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active" wx:for="{{newsData}}" wx:key="index" wx:for-item="news">
@@ -19,7 +19,8 @@
   </navigator>
 </view>
 <view class="button-sp-area">
-  <button open-type="share" class="weui-btn" type="primary" plain="true">分享文经新闻</button>
+  <button open-type="share" class="weui-btn" type="primary" plain="true">
+  分享UP新闻</button>
 </view>
 <view style="padding-bottom:500rpx;">
   <view class="page__desc" style="color:#999;text-align:center;">上拉加载更多信息...</view>

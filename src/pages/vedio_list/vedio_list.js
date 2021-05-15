@@ -6,6 +6,13 @@ Page({
    */
   data: {
     num:'',
+    vid:'',
+    tabs1:[
+      {
+        id:0,
+        value:"全部",
+        isActive:true
+      },],
     tabs:[
       {
         id:0,
@@ -19,44 +26,13 @@ Page({
       },
      
     ],
-    jihuaList:[
-      {
-        jihua_Img:'/images/dianshi.jpg',
-        jihua_name:'12分钟快速热身跑',
-        jihua_playNum:'5',
-        jihua_biaozhunNum:'14',
-        jvid:'jv0',
-  
-      },
-      {
-        jihua_Img:'/images/dianshi.jpg',
-        jihua_name:'7分钟瘦脸瘦下巴大当家u的规范化收到回复就放',
-        jihua_playNum:'5',
-        jihua_biaozhunNum:'14',
-        jvid:'av004',
-  
-  
-      },
-      {
-        jihua_Img:'/images/dianshi.jpg',
-        jihua_name:'7分钟瘦脸瘦下巴大当家u的规范化收到回复就放',
-        jihua_playNum:'5',
-        jihua_biaozhunNum:'14',
-        jvid:'av004',
-  
-      },
-      ],
-    vedio_List:[
-      {},
-    ]
+    vedio_List:[],
+    vedio_List1:[],
+    vedio_List2:[],
 
   },
   //接口要的
-  QueryParams:{
-    vid:"",
-    pagenum:1,
-    pagesize:10,
-  },
+  
   //标题的点击事件  从子组件传递过来
   handletabsItemChange(e){
    //  1 获取被点击的标题索引
@@ -74,32 +50,91 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.QueryParams.vid=options.vid;
-   
-
+    
+    console.log(options);
+    
+        this.setData({
+       vid:options.vid,}); 
+       this.getVideoList();
+       this.getVideoList1();
+       this.getVideoList2();
   },
 
   //获取视频列表数据
-  getVideoList(){
-    const res = wx.request({
-      url: 'url',
-      data: this.QueryParams,
-      dataType: dataType,
-      enableCache: true,
-      enableHttp2: true,
-      enableQuic: true,
-      header: header,
-      method: method,
-      responseType: responseType,
-      timeout: 0,
-      success: (result) => {},
-      fail: (res) => {},
-      complete: (res) => {},
+  getVideoList:function(){
+    var that=this;
+      let myurl=getApp().globalData.myurl+'/video/getByClass1/'+this.data.vid;
+      console.log(myurl);
+    wx.request({
+      url: myurl,
+      method:"GET",
+      success:function(res){
+      console.log(res);
+      var list=res.data.data.videoList;
+      console.log(list);
+      for (let i = 0; i < list.length; i++) {
+        console.log(i, list[i]);
+        list[i].url=escape(list[i].url)
+        console.log(i, list[i]);
+      }
+      that.setData({
+        vedio_List:list
+      })
+      }
     })
-    console.log(res);
-    this.setData({
-      vedio_List:res.vedio
+
+
+  },
+
+  getVideoList1:function(){
+    var that=this;
+      let myurl=getApp().globalData.myurl+'/video/getMain/'+this.data.vid;
+      console.log(myurl);
+    wx.request({
+      url: myurl,
+      method:"GET",
+      success:function(res){
+      console.log(res);
+      var list=res.data.data.videoList;
+      console.log(list);
+      for (let i = 0; i < list.length; i++) {
+        console.log(i, list[i]);
+        list[i].url=escape(list[i].url)
+        console.log(i, list[i]);
+      }
+      that.setData({
+        vedio_List1:list
+      })
+      }
     })
+
+
+  },
+
+
+  getVideoList2:function(){
+    var that=this;
+      let myurl=getApp().globalData.myurl+'/video/getTop';
+      console.log(myurl);
+    wx.request({
+      url: myurl,
+      method:"GET",
+      success:function(res){
+      console.log(res);
+      var list=res.data.data.videoList;
+      console.log(list);
+      for (let i = 0; i < list.length; i++) {
+        console.log(i, list[i]);
+        list[i].url=escape(list[i].url)
+        console.log(i, list[i]);
+      }
+      that.setData({
+        vedio_List2:list
+      })
+      }
+    })
+
+
   },
   /**
    * 生命周期函数--监听页面初次渲染完成

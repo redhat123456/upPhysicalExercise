@@ -1,1 +1,56 @@
 /* pages/suju_yundong/suju_yundong.wxss */
+.user_main{
+  position: absolute;
+  width: 90%;
+  left: 50%;
+  transform: translateX(-50%);
+  
+  padding-bottom: 100rpx;
+}
+
+.orders_wrap{
+  background-color: #fff;
+  margin-top: 40rpx;
+  }
+  .orders_title{
+  padding: 20rpx;
+  border-bottom: 1rpx solid #ccc;
+  }
+  .page{
+    background-color: #edece8;
+  }
+
+
+
+
+.first_tab .goods_item {
+  display: flex;
+  border-bottom: 1px solid #ccc;
+  margin-top: 20rpx ;
+  padding-bottom: 20rpx;
+}
+.first_tab .goods_item .goods_img_wrap {
+  flex: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.first_tab .goods_item .goods_img_wrap image {
+  width: 70%;
+}
+.first_tab .goods_item .goods_info_wrap {
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.first_tab .goods_item .goods_info_wrap .goods_name {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+.first_tab .goods_item .goods_info_wrap .goods_price {
+  color: var(--themeColor);
+  font-size: 32rpx;
+}

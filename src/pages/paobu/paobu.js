@@ -72,8 +72,10 @@ function fill_zero_prefix(num) {
 
 Page({
   data: {
+    date:'',
     clock: '',
     isLocation:false,
+    id:'',
     latitude: 0,
     longitude: 0,
     markers: [],
@@ -88,6 +90,16 @@ Page({
     this.getLocation()
     console.log("onLoad")
     count_down(this);
+
+    this.setData({
+        id:options.id,
+        date:options.date
+    })
+    this.setData({
+      meters: 0.00,
+      time: "0:00:00"
+    })
+    this.daka();
   },
   //****************************
   openLocation:function (){
@@ -103,6 +115,23 @@ Page({
     })
   },
 
+
+  daka:function(){
+    var time = this.data.date;
+    let that =this ;
+    console.log(time);
+    wx.request({
+      url: getApp().globalData.myurl + '/plan/doSign/' + that.data.id + '/' + time,
+      data:{},
+      method:"GET",
+      success:function(){
+        console.log('打卡成功！');
+      },
+      fail:function(){
+        console.log('打卡失败！');
+      }
+    })
+  },
 
 //****************************
   starRun :function () {
@@ -122,20 +151,53 @@ Page({
   },
 
 
-//
+punch_in:function(){
+
+},
  stopRun2:function () {
-  wx.showToast({
-    title: '跑步结束，上传成功',
-    icon: 'success',
-    duration: 3000 ,
-    success: function () {
-      setTimeout(function () {
-      wx.reLaunch({
-      url: '/pages/jihua/jihua',
-        })
-      }, 1000);
-     }
+  starRun = 0;
+  count_down(this);
+  let Time=this.data.time;
+  let KM=this.data.meters;
+  let id = this.data.id;
+  console.log(Time);
+  console.log(KM);
+  wx.request({
+    url: getApp().globalData.myurl+ '/run/addRunData',
+    data:{
+      "createtime": "",
+      "data": KM,
+      "date": Time,
+      "id": id,
+      "openid": wx.getStorageSync("openid"),
+      "updatetime": ""
+    },
+    method:"POST",
+    success:function(){
+      wx.showToast({
+        title: '跑步结束，上传成功',
+        icon: 'success',
+        duration: 3000 ,
+        success: function () {
+          setTimeout(function () {
+          wx.reLaunch({
+          url: '/pages/jihua/jihua',
+            })
+          }, 1000);
+         }
+      })
+    },
+    fail:function(){
+      wx.showToast({
+        title: '上传失败，请检查网络',
+        icon: 'success',
+        duration: 3000 ,
+        
+      })
+    }
+
   })
+
   
   },
 //****************************

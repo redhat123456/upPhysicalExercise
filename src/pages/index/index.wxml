@@ -26,7 +26,7 @@
       <navigator url="/pages/core/set/today" hover-class="none">
         <view class="weui-panel__hd">
           {{theDay}}
-          <image style="height:42rpx;width:42rpx;display:inline-block;verticle-align:middle;" src="/images/set_icon.png" />
+          
         </view>
       </navigator>
 
@@ -36,38 +36,22 @@
           <view class="weui-cells__tips">* 如已设置完成，请下拉刷新课程信息</view>
         </view>
         <view class="weui-media-box weui-media-box_appmsg" wx:else>
-          <block wx:if="{{today == 'error'}}">
-            <view class="weui-media-box__hd_in-appmsg">
-              ⚠
-            </view>
-            <view class="weui-media-box_text">
-              当前网络不可用，请检查
-            </view>
-          </block>
-          <block wx:elif="{{course == 'null'}}">
+
+
+
+
+          <block >
             <view class="weui-media-box__hd_in-appmsg">
               {{65}}
             </view>
             <view class="weui-media-box_text">
-              目前没有训练，休息一下吧
+              天你已使用，训练在于一天天的积累和坚持!!!😘😘😘
             </view>
           </block>
-          <block wx:else>
-            <view class="weui-media-box__hd_in-appmsg">
-              {{todayWeek.week}}
-            </view>
-            <view class="weui-media-box_text">
-              <block wx:for="{{today.course}}" wx:key="course_key" wx:for-item="course">
-                <view class="weui-media-box__title weui-media-box__title_in-text">{{course.name}}</view>
-                <view class="weui-media-box__info">
-                  <view class="weui-media-box__desc weui-media-box__info__meta">
-                    <image style="height:24rpx;width:24rpx;vertical-align:middle;" src="/images/location_icon.png" /> {{course.location}}</view>
-                  <view class="weui-media-box__desc weui-media-box__info__meta_extra">
-                    <image style="height:24rpx;width:24rpx;vertical-align:middle;" src="/images/time_icon.png" /> {{course.week}}</view>
-                </view>
-              </block>
-            </view>
-          </block>
+
+
+        
+        
         </view>
       </view>
     </view>
@@ -91,9 +75,9 @@
           <image class="weui-grid__icon" src="/images/tabbar/news.png" />
           <view class="weui-grid__label">UP新闻</view>
         </navigator>
-        <navigator url="/pages/core/check/index" class="weui-grid" hover-class="weui-grid_active">
+        <navigator url="/pages/suju_yundong/suju_yundong" class="weui-grid" hover-class="weui-grid_active">
           <image class="weui-grid__icon" src="/images/tabbar/check.png" />
-          <view class="weui-grid__label">早起打卡</view>
+          <view class="weui-grid__label">运动数据</view>
         </navigator>
         <navigator url="/pages/suju_jiangkan/suju_jiangkan" class="weui-grid" hover-class="weui-grid_active">
           <image class="weui-grid__icon" src="/images/tabbar/urp.png" />
@@ -130,14 +114,15 @@
 
 
 
+
 <view class="banner">
   <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}"
    interval="{{interval}}" duration="{{duration}}" indicator-active-color="#fff">
     
       <block wx:for="{{imgUrls}}">
         <swiper-item>
-           <navigator url="/pages/vedio/vedio" >
-            <image  src="{{item.url}}" class="slide-image" width="355" height="150" />
+           <navigator url="/pages/vedio/vedio?count={{count}}&id={{videoId}}&url={{url}}" >
+            <image  src="{{item.cover}}" class="slide-image" width="1280" height="720" />
            </navigator>
         </swiper-item>
       </block>
@@ -148,43 +133,45 @@
 
 
 <scroll-view class="major" scroll-x>
-     <navigator  class="box" url="/pages/vedio/vedio">
-     <image class="pic" src="/images/reshen.png"></image>
+     <navigator  class="box" url="/pages/vedio_list/vedio_list?vid=背部训练">
+     <image class="pic" src="/images/1.png"></image>
      <view class="txt">背部训练</view>
      </navigator>
 
-       <navigator class="box" url="/pages/vedio/vedio">
-     <image class="pic" src="/images/paobu.png"></image>
-     <view class="txt">臀部训练</view>
+       <navigator class="box" url="/pages/vedio_list/vedio_list?vid=臀腿训练">
+     <image class="pic" src="/images/2.png"></image>
+     <view class="txt">臀腿训练</view>
      </navigator>
 
-       <navigator class="box" url="/pages/vedio/vedio">
-     <image class="pic" src="/images/suxin.png"></image>
+       <navigator class="box" url="/pages/vedio_list/vedio_list?vid=徒手训练">
+     <image class="pic" src="/images/3.png"></image>
      <view class="txt">徒手训练</view>
      </navigator>
 
-       <navigator class="box" url="/pages/vedio/vedio">
-     <image class="pic" src="/images/shangzhi.png"></image>
+       <navigator class="box" url="/pages/vedio_list/vedio_list?vid=体态矫正">
+     <image class="pic" src="/images/4.png"></image>
      <view class="txt">体态矫正</view>
      </navigator>
 
-       <navigator class="box" url="/pages/vedio/vedio">
-     <image class="pic" src="/images/xiazhi.png"></image>
-     <view class="txt">手臂训练</view>
-     </navigator>
 
-     <navigator class="box" url="/pages/vedio/vedio">
-     <image class="pic" src="/images/hexing.png"></image>
+     <navigator class="box" url="/pages/vedio_list/vedio_list?vid=肩部训练">
+     <image class="pic" src="/images/5.png"></image>
      <view class="txt">肩部训练</view>
      </navigator>
 
-     <navigator class="box" url="/pages/vedio/vedio">
-     <image class="pic" src="/images/youyang.png"></image>
+       <navigator class="box" url="/pages/vedio_list/vedio_list?vid=手臂训练">
+     <image class="pic" src="/images/6.png"></image>
+     <view class="txt">手臂训练</view>
+     </navigator>
+
+     
+     <navigator class="box" url="/pages/vedio_list/vedio_list?vid=腹部训练">
+     <image class="pic" src="/images/7.png"></image>
      <view class="txt">腹部训练</view>
      </navigator>
 
-     <navigator class="box" url="/pages/vedio/vedio">
-     <image class="pic" src="/images/guangjie.png"></image>
+     <navigator class="box" url="/pages/vedio_list/vedio_list?vid=胸部训练">
+     <image class="pic" src="/images/8.png"></image>
      <view class="txt">胸部训练</view>
      </navigator>
 </scroll-view>
@@ -208,7 +195,7 @@
       </view>
     </navigator>
     <view class="content-wrapper">
-      <block wx:for="{{hotList}}" wx:key="avid">
+      <block wx:for="{{hotList}}" wx:key="id">
         <!-- 使用热门推荐模板，传入当前循环对象item -->
         <template is="jiefItem1" data="{{...item}}"></template>
       </block>
@@ -219,10 +206,10 @@
 
   <!--背部训练 begin-->
   <view class="row-container">
-    <navigator class="header"  url="/pages/vedio_list/vedio_list?vid=02">
+    <navigator class="header"  url="/pages/vedio_list/vedio_list?vid=背部训练">
       <view class="left">
         <view class="bilibili-index-sprite bilibili-index-hot">
-          <image src=""></image>
+          <image src="/images/1.png"></image>
         </view>
         <text>背部训练</text>
       </view>
@@ -234,21 +221,21 @@
       </view>
     </navigator>
     <view class="content-wrapper">
-      <block wx:for="{{animationList}}" wx:key="avid">
+      <block wx:for="{{List1}}" wx:key="">
         <!-- 使用热门推荐模板，传入当前循环对象item -->
         <template is="jiefItem1" data="{{...item}}"/>
       </block>
     </view>
   </view>
   <!--背部训练 end-->
-  <!--臀部训练 begin-->
+  <!--臀腿训练 begin-->
       <view class="row-container">
-    <navigator class="header"  url="/pages/vedio_list/vedio_list?vid=03">
+    <navigator class="header"  url="/pages/vedio_list/vedio_list?vid=臀腿训练">
       <view class="left">
         <view class="bilibili-index-sprite bilibili-index-hot">
-          <image src=""></image>
+          <image src="/images/2.png"></image>
         </view>
-        <text>臀部训练</text>
+        <text>臀腿训练</text>
       </view>
       <view class="right">
         <view class="bilibili-index-sprite bilibili-index-arrow">
@@ -258,19 +245,19 @@
       </view>
     </navigator>
     <view class="content-wrapper">
-      <block wx:for="{{animationList}}" wx:key="avid">
+      <block wx:for="{{List2}}" wx:key="">
         <!-- 使用热门推荐模板，传入当前循环对象item -->
         <template is="jiefItem1" data="{{...item}}"/>
       </block>
     </view>
   </view>
-  <!--臀部训练 end-->
+  <!--臀腿训练 end-->
   <!--徒手训练 begin-->
       <view class="row-container">
-    <navigator class="header"  url="/pages/vedio_list/vedio_list?vid=04">
+    <navigator class="header"  url="/pages/vedio_list/vedio_list?vid=徒手训练">
       <view class="left">
         <view class="bilibili-index-sprite bilibili-index-hot">
-          <image src=""></image>
+          <image src="/images/3.png"></image>
         </view>
         <text>徒手训练</text>
       </view>
@@ -282,7 +269,7 @@
       </view>
     </navigator>
     <view class="content-wrapper">
-      <block wx:for="{{animationList}}" wx:key="avid">
+      <block wx:for="{{List3}}" wx:key="">
         <!-- 使用热门推荐模板，传入当前循环对象item -->
         <template is="jiefItem1" data="{{...item}}"/>
       </block>
@@ -292,10 +279,10 @@
 
   <!--体态矫正 begin-->
   <view class="row-container">
-    <navigator class="header"  url="/pages/vedio_list/vedio_list?vid=04">
+    <navigator class="header"  url="/pages/vedio_list/vedio_list?vid=体态矫正">
       <view class="left">
         <view class="bilibili-index-sprite bilibili-index-hot">
-          <image src=""></image>
+          <image src="/images/4.png"></image>
         </view>
         <text>体态矫正</text>
       </view>
@@ -307,7 +294,7 @@
       </view>
     </navigator>
     <view class="content-wrapper">
-      <block wx:for="{{animationList}}" wx:key="avid">
+      <block wx:for="{{List4}}" wx:key="">
         <!-- 使用热门推荐模板，传入当前循环对象item -->
         <template is="jiefItem1" data="{{...item}}"/>
       </block>
@@ -317,10 +304,10 @@
 
     <!--手臂训练 begin-->
     <view class="row-container">
-    <navigator class="header"  url="/pages/vedio_list/vedio_list?vid=04">
+    <navigator class="header"  url="/pages/vedio_list/vedio_list?vid=手臂训练">
       <view class="left">
         <view class="bilibili-index-sprite bilibili-index-hot">
-          <image src=""></image>
+          <image src="/images/5.png"></image>
         </view>
         <text>手臂训练</text>
       </view>
@@ -332,7 +319,7 @@
       </view>
     </navigator>
     <view class="content-wrapper">
-      <block wx:for="{{animationList}}" wx:key="avid">
+      <block wx:for="{{List5}}" wx:key="">
         <!-- 使用热门推荐模板，传入当前循环对象item -->
         <template is="jiefItem1" data="{{...item}}"/>
       </block>
@@ -343,10 +330,10 @@
 
     <!--肩部训练 begin-->
     <view class="row-container">
-    <navigator class="header"  url="/pages/vedio_list/vedio_list?vid=04">
+    <navigator class="header"  url="/pages/vedio_list/vedio_list?vid=肩部训练">
       <view class="left">
         <view class="bilibili-index-sprite bilibili-index-hot">
-          <image src=""></image>
+          <image src="/images/6.png"></image>
         </view>
         <text>肩部训练</text>
       </view>
@@ -358,7 +345,7 @@
       </view>
     </navigator>
     <view class="content-wrapper">
-      <block wx:for="{{animationList}}" wx:key="avid">
+      <block wx:for="{{List6}}" wx:key="">
         <!-- 使用热门推荐模板，传入当前循环对象item -->
         <template is="jiefItem1" data="{{...item}}"/>
       </block>
@@ -369,10 +356,10 @@
 
     <!--腹部训练 begin-->
     <view class="row-container">
-    <navigator class="header"  url="/pages/vedio_list/vedio_list?vid=04">
+    <navigator class="header"  url="/pages/vedio_list/vedio_list?vid=腹部训练">
       <view class="left">
         <view class="bilibili-index-sprite bilibili-index-hot">
-          <image src=""></image>
+          <image src="/images/7.png"></image>
         </view>
         <text>腹部训练</text>
       </view>
@@ -384,7 +371,7 @@
       </view>
     </navigator>
     <view class="content-wrapper">
-      <block wx:for="{{animationList}}" wx:key="avid">
+      <block wx:for="{{List7}}" wx:key="">
         <!-- 使用热门推荐模板，传入当前循环对象item -->
         <template is="jiefItem1" data="{{...item}}"/>
       </block>
@@ -394,10 +381,10 @@
 
     <!--胸部训练 begin-->
     <view class="row-container">
-    <navigator class="header"  url="/pages/vedio_list/vedio_list?vid=04">
+    <navigator class="header"  url="/pages/vedio_list/vedio_list?vid=胸部训练">
       <view class="left">
         <view class="bilibili-index-sprite bilibili-index-hot">
-          <image src=""></image>
+          <image src="/images/8.png"></image>
         </view>
         <text>胸部训练</text>
       </view>
@@ -409,7 +396,7 @@
       </view>
     </navigator>
     <view class="content-wrapper">
-      <block wx:for="{{animationList}}" wx:key="avid">
+      <block wx:for="{{List8}}" wx:key="">
         <!-- 使用热门推荐模板，传入当前循环对象item -->
         <template is="jiefItem1" data="{{...item}}"/>
       </block>
@@ -420,22 +407,22 @@
 <view class="dynamic">
   <view class="container">
 
-  <PubTitle myTitle="为您推荐" myUrl="/pages/jihua_list/jihua_list?list=2"/>
+  <PubTitle myTitle="计划列表" myUrl="/pages/jihua_list/jihua_list?list=2"/>
 
   <view class="dyMain">
     <view class="first_tab">
         <navigator class="goods_item"
         wx:for="{{jihuaList}}"
         wx:key="jihua_id"
-        url="/pages/jihua21/jihua21?jv={{item.jvid}}"
+        url="/pages/jihua_anpai/jihua_anpai?name={{item.url}}&cover={{item.cover}}"
         >
             <!-- 左侧 计划容器 -->
             <view class="goods_img_wrap">
-              <image mode="widthFix" src="{{item.jihua_Img}}"></image>
+              <image mode="widthFix" src="{{item.cover}}"></image>
             </view>
             <!-- 右侧 完成量容器 -->
             <view class="goods_info_wrap">
-              <view class="goods_name">{{item.jihua_name}}</view>
+              <view class="goods_name">{{item.name}}</view>
               <view class="goods_price">{{item.jieshao}}</view>
             </view>
           </navigator>

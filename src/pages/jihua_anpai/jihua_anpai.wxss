@@ -75,3 +75,10 @@ page{
   height: 100%;
   opacity: 0;
 }
+
+
+.zhengwen{
+  margin-top: 30rpx;
+  text-align: center ;
+  margin-bottom: 30rpx;
+}

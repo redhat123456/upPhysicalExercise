@@ -35,36 +35,79 @@ Page({
     ],
     jihuaList:[
       {
-        jihua_id:0,
-        jihua_Img:'/images/dianshi.jpg',
-        jihua_name:'12分钟快速热身跑',
-        jieshao:'12分钟 · 初级 · 考前',
-        jvid:'jv0',
+        id:0,
+        cover:'http://121.196.145.60:3332/1.jpg',
+        name:'新手入门',
+        jieshao:'30分钟 · 小白 · 基础',
+        url:'新手入门',
   
       },
       {
-        jihua_id:1,
-        jihua_Img:'/images/dianshi.jpg',
-        jihua_name:'7分钟瘦脸瘦下巴大当家u的规范化收到回复就放',
-        jieshao:'12分钟 · 初级 · 考前',
-        jvid:'av004',
-  
+        id:0,
+        cover:'http://121.196.145.60:3332/2.jpg',
+        name:'每天30分钟系列',
+        jieshao:'30分钟 · 初级 · 全身',
+        url:'30分钟系列',
   
       },
       {
-        jihua_id:2,
-        jihua_Img:'/images/dianshi.jpg',
-        jihua_name:'7分钟瘦脸瘦下巴大当家u的规范化收到回复就放',
-        jieshao:'12分钟 · 初级 · 考前',
-        jvid:'av004',
+        id:0,
+        cover:'http://121.196.145.60:3332/3.jpg',
+        name:'每天45分钟系列',
+        jieshao:'45分钟 · 进阶 · 锻炼',
+        url:'45分钟系列',
   
       },
+      {
+        id:0,
+        cover:'http://121.196.145.60:3333/5.jpg',
+        name:'12分钟快速热身跑',
+        jieshao:'12分钟 · 初级 · 考前',
+        url:'跑步训练',
+  
+      },
+    ],
+      list1:[
+        {
+          id:0,
+          cover:'http://121.196.145.60:3333/5.jpg',
+          name:'12分钟快速热身跑',
+          jieshao:'12分钟 · 初级 · 考前',
+          url:'跑步训练',
+    
+        },
       ],
-
-    vedio_List:[
-      {},
-    ]
-
+      list2:[
+        {
+          id:0,
+          cover:'http://121.196.145.60:3332/1.jpg',
+          name:'新手入门',
+          jieshao:'30分钟 · 小白 · 基础',
+          url:'新手入门',
+    
+        },
+      ],
+      list3:[
+        {
+          id:0,
+          cover:'http://121.196.145.60:3332/2.jpg',
+          name:'每天30分钟系列',
+          jieshao:'30分钟 · 初级 · 全身',
+          url:'30分钟系列',
+    
+        },
+      ],
+      list4:[
+        {
+          id:0,
+          cover:'http://121.196.145.60:3332/3.jpg',
+          name:'每天45分钟系列',
+          jieshao:'45分钟 · 进阶 · 锻炼',
+          url:'45分钟系列',
+    
+        },
+      ]
+     
   },
   //接口要的
   QueryParams:{
@@ -89,33 +132,11 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.QueryParams.vid=options.vid;
-   
+
 
   },
 
-  //获取视频列表数据
-  getVideoList(){
-    const res = wx.request({
-      url: 'url',
-      data: this.QueryParams,
-      dataType: dataType,
-      enableCache: true,
-      enableHttp2: true,
-      enableQuic: true,
-      header: header,
-      method: method,
-      responseType: responseType,
-      timeout: 0,
-      success: (result) => {},
-      fail: (res) => {},
-      complete: (res) => {},
-    })
-    console.log(res);
-    this.setData({
-      vedio_List:res.vedio
-    })
-  },
+
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

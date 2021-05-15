@@ -8,5 +8,5 @@
   <image style="width:100%" mode="widthFix" src="https://wechat.sangsir.com/timetable/data/calendar/desc.jpg"></image>
 </view>
 <view class="button-sp-area">
-  <button open-type="share" class="weui-btn" type="primary" plain="true">分享文经校历</button>
+  <button open-type="share" class="weui-btn" type="primary" plain="true">分享桂电校历</button>
 </view>

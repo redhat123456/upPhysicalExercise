@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "Tabs":"../../components/Tabs/Tabs"
+  },
+  "navigationBarTitleText": "视频列表"
+
+}

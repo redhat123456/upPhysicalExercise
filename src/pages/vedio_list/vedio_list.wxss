@@ -8,9 +8,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 200rpx;
 }
 .first_tab .goods_item .goods_img_wrap image {
-  width: 70%;
+  width: 90%;
 }
 .first_tab .goods_item .goods_info_wrap {
   flex: 3;

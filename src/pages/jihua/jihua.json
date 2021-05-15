@@ -1,6 +1,6 @@
 {
 	"usingComponents": {
-    "calendar": "/components/v2/index"
+    "calendar": "plugin://calendar/calendar"
   },
 	"navigationBarTitleText": "训练日历"
 

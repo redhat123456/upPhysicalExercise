@@ -71,6 +71,8 @@ page {
 .first_tab .goods_item {
   display: flex;
   border-bottom: 1px solid #ccc;
+  height: 180rpx;
+
 }
 .first_tab .goods_item .goods_img_wrap {
   flex: 2;
@@ -96,4 +98,56 @@ page {
 .first_tab .goods_item .goods_info_wrap .goods_price {
   color: var(--themeColor);
   font-size: 32rpx;
+}
+
+
+
+
+
+
+/*按钮*/
+.btm_tool{
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 90rpx;
+  background-color: #fff;
+  display: flex;
+}
+
+.tool_item{
+  flex: 1;
+  display: flex;
+  /*上下排列
+  flex-direction: column;
+    水平居中
+  justify-content: center;
+  */
+  align-items: center;
+  position: relative;
+
+}
+
+.btn_cart{
+align-items: center;
+justify-content: center;
+background-color: red;
+color: #fff;
+font-size: 30rpx;
+font-weight: 600;
+}
+
+.btn1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+
+
+.goods_item{
+  padding: 20rpx;
 }

@@ -61,7 +61,7 @@ Page({
 
     var tizhi = BMI + Number(this.data.tizhi);
     wx.request({
-      url: 'app.globalData.myurl/body/addBodyData',
+      url: getApp().globalData.myurl+'/body/addBodyData',
       data: {
         bmi: BMI,
         height: this.data.shenggao,

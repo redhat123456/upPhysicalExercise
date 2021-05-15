@@ -20,26 +20,26 @@
 
     <view class="first_tab">
         <view class="goods_item"
-        wx:for="{{jihuaList}}"
+        wx:for="{{jiangkan}}"
         wx:key="id">
             <!-- 左侧 计划容器 -->
             <view class="goods_img_wrap">
-              <view>{{item.riqi}}</view>
+              <view>{{item.createtime}}</view>
             </view>
             <!-- 右侧 完成量容器 -->
             <view class="goods_info_wrap">
               <view wx:if="{{sv==01}}">
-              <view class="goods_name">体重：{{item.shengao}}kg</view>
-              <view class="goods_price">身高：{{item.tizhong}}cm</view>
+              <view class="goods_name">体重：{{item.height}}kg</view>
+              <view class="goods_price">身高：{{item.weight}}cm</view>
 
               </view>
       <view wx:elif="{{sv==02}}">
-        <view class="goods_name">BMI：{{item.BMI}}</view>
+        <view class="goods_name">BMI：{{item.bmi}}</view>
 
 
       </view>
       <view wx:elif="{{sv==03}}">
-        <view class="goods_name">体脂率：{{item.tizhi}}</view>
+        <view class="goods_name">体脂率：{{item.rate}}</view>
 
       </view>
               
@@ -85,24 +85,13 @@
    <!--填写模块end-->
   </view>
 </view>
-
-</view>
-
 <view class="btm_tool">
-    
-<view></view>
-
-
     <view wx:if="{{sv==01}}" class="tool_item  btn_buy">
       <view >记录身高和体重</view>
-      
-    
-    <button class="btn1" bindtap="suju" ></button>
-
+    <button bindtap="suju1" class="btn1"  >记录身高和体重</button>
   </view>
-  
-
   <view wx:elif="{{sv==02}}"></view>
       <view wx:elif="{{sv==03}}"></view>
-
 </view>
+</view>
+

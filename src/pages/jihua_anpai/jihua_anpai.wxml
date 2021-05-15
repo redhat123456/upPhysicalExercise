@@ -4,15 +4,18 @@
 <view class="user_main">
 <!--项目简介-->
 <view class="orders_wrap" >
+
   <view class="orders_title">计划简介</view>
   <view>{{jihuajianjie}}</view>
 </view>
 <!--计划制定安排-->
 <view class="orders_wrap" >
   <view class="orders_title">计划制定</view>
+  <view class="zhengwen">⚠️⚠️请选择你一周中打算训练的天</view>
   <view>
 
     <view class="weui-cells weui-cells_after-title">
+      
       <checkbox-group bindchange="checkboxChange">
         <label class="weui-cell weui-check__label" wx:for="{{items}}" wx:key="{{item.value}}">
 
@@ -30,11 +33,7 @@
 </view>
 
 <view class="btm_tool">
-  <view class="tool_item btn_cart">
-    收藏该课程
-    <button class="btn1" bindtap="shoucang"></button>
-  </view>
-
+ 
     <view class="tool_item  btn_buy">
     立即添加计划
     <button class="btn1" bindtap="jihua"></button>

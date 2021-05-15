@@ -5,7 +5,6 @@
   "pages": [
     "pages/index/index",
     "pages/dynamic/dynamic",
-    "pages/bilibili/bilibili",
     "pages/job/job",
     "pages/jihua/jihua",
     "pages/xinxi2/xinxi2",
@@ -16,7 +15,6 @@
     "pages/kefu/kefu",
     "pages/tice/tice",
     "pages/yijian/yijian",
-    "pages/jihua21/jihua21",
     "pages/we/we",
     "pages/tuijian/tuijian",
     "pages/vedio_list/vedio_list",
@@ -26,31 +24,15 @@
     "pages/suju_yundong/suju_yundong",
     "pages/suju_jiangkan/suju_jiangkan",
     "pages/me_jihua/me_jihua",
-    "pages/kecheng_xueguo/kecheng_xueguo",
-    "pages/kecheng_shoucang/kecheng_shoucang",
     "pages/suju/suju",
-    "pages/more/help",
-    "pages/more/about",
-    "pages/more/zhiwei",
     "pages/core/news/index",
     "pages/core/news/detail",
-    "pages/core/check/index",
-    "pages/core/check/list",
-    "pages/core/check/about",
-    "pages/core/set/today",
-    "pages/core/calendar/index",
-    "pages/search/table/today",
-    "pages/search/table/all",
-    "pages/search/room/index",
-    "pages/search/lib/index",
-    "pages/search/lib/detail",
-    "pages/search/exam/index",
-    "pages/search/id/index"
-    
+    "pages/core/calendar/index"
+
   ],
   "window": {
     "backgroundTextStyle": "light",
-    "navigationBarTitleText": "up健身训练",
+    "navigationBarTitleText": "up体能训练",
     "navigationBarTextStyle": "white",
     "navigationBarBackgroundColor": "#43B0D1"
     
@@ -61,7 +43,7 @@
     }
   },
   "tabBar": {
-    "selectedColor": "#c30",
+    "selectedColor": "#43B0D1",
     "backgroundColor": "#fff",
     "borderStyle": "white",
     "list": [
@@ -86,5 +68,11 @@
     ]
   },
   "style": "v2",
-  "sitemapLocation": "sitemap.json"
+  "sitemapLocation": "sitemap.json",
+  "plugins": {
+    "calendar": {
+        "version": "1.1.3",
+        "provider": "wx92c68dae5a8bb046"
+    }
+}
 }

@@ -1,34 +1,13 @@
 <toubu></toubu>
 
 
-<view style="width: 90%;height:500rpx;overflow:hidden;margin: 0 auto 40rpx;">
-  <calendar
-    id="calendar"
-    config="{{calendarConfig}}"
-    bind:onSwipe="onSwipe"
-    bind:takeoverTap="takeoverTap"
-    bind:afterTapDate="afterTapDate"
-    bind:whenChangeMonth="whenChangeMonth"
-    bind:afterCalendarRender="afterCalendarRender"
-  ></calendar>
+<view style="width: 90%;height:600rpx;overflow:hidden;margin: 0 auto 40rpx;">
+  <calendar  calendar-style="calendar"  header-style="calendar-header"  board-style="calendar-board" days-color="{{dayStyle}}" weeks-type="cn"  />
 </view>
 
-<view class='b cc wrap btn-wrap'>
-    <button
-      class='b cc btn btn-{{item.color}} btn-action-{{item.action}}'
-      wx:for="{{actionBtn}}"
-      wx:key="action"
-      data-action="{{item.action}}"
-      data-disable="{{item.disable}}"
-      bindtap="handleAction">{{item.text}}</button>
-</view>
 
-<view class="show-rst-wrap">
-  <view wx:if="{{rst}}" wx:for="{{rst}}" wx:key="index" class="show-rst">{{item}}</view>
-  <view wx:if="{{rstStr}}" wx:key="index" class="show-rst">{{rstStr}}</view>
-</view>
 
-<button type="handleAction ">展示</button>
+
 
 <view class="user_content">
 <view class="user_main">
@@ -43,31 +22,53 @@
   <view class="orders_title">训练安排</view>
 
   <view class="first_tab">
+      
         <navigator class="goods_item"
-        wx:for="{{jihuaList}}"
-        wx:key="jihua_id"
-        url="/pages/jihua21/jihua21?jv={{item.jvid}}"
+        wx:for="{{jihuaList1}}"
+        wx:key="id"
+        wx:if="{{item.name=='跑步训练'}}"
+        url="/pages/paobu/paobu?id={{item.id}}&date={{date}}"
         >
+        
             <!-- 左侧 计划容器 -->
             <view class="goods_img_wrap">
-              <image mode="widthFix" src="{{item.jihua_Img}}"></image>
+              <image mode="widthFix" src="{{item.cover}}"></image>
             </view>
             <!-- 右侧 完成量容器 -->
             <view class="goods_info_wrap">
-              <view class="goods_name">{{item.jihua_name}}</view>
-              <view class="goods_price">已完成：{{item.jihua_playNum}}/{{item.jihua_biaozhunNum}}</view>
+              <view class="goods_name">{{item.name}}</view>
+              <view class="goods_price">已完成：{{item.progress}}/{{item.extent}}</view>
             </view>
+          
           </navigator>
     </view>    
 
+    <view class="first_tab">
+      
+      <navigator class="goods_item"
+      wx:for="{{jihuaList1}}"
+      wx:key="id"
+      wx:if="{{item.name=='30分钟系列'||item.name=='45分钟系列'||item.name=='新手入门'}}"
+      url="/pages/vedio_list1/vedio_list1?date={{date}}&id={{item.id}}">
+      
+          <!-- 左侧 计划容器 -->
+          <view class="goods_img_wrap">
+            <image mode="widthFix" src="{{item.cover}}"></image>
+          </view>
+          <!-- 右侧 完成量容器 -->
+          <view class="goods_info_wrap">
+            <view class="goods_name">{{item.firstClassification}}</view>
+            <view class="goods_name">{{item.name}}</view>
+            <view class="goods_price">已完成：{{item.progress}}/{{item.extent}}</view>
+          </view>
+        
+        </navigator>
+  </view>    
+
+    
 
   <button  bindtap="handleShowAction" type="primary" class="btn">新增训练计划</button>
   </view>
-
-
-
-
-
 
 </view>
 </view>

@@ -5,30 +5,34 @@
   <view class="orders_title">我的计划</view>
 
   <view class="first_tab">
-        <navigator class="goods_item"
-        wx:for="{{jihuaList}}"
-        wx:key="jihua_id"
-        url="/pages/jihua21/jihua21?jv={{item.jvid}}"
-        >
-            <!-- 左侧 计划容器 -->
-            <view class="goods_img_wrap">
-              <image mode="widthFix" src="{{item.jihua_Img}}"></image>
-            </view>
-            <!-- 右侧 完成量容器 -->
-            <view class="goods_info_wrap">
-              <view class="goods_name">{{item.jihua_name}}</view>
-              <view class="goods_price">已完成：{{item.jihua_playNum}}/{{item.jihua_biaozhunNum}}</view>
-            </view>
-          </navigator>
+    <radio-group bindchange="radioChange">
+        <label class="weui-cell weui-check__label" wx:for="{{jihuaList}}" wx:key="{{item.id}}">
+
+          <view class="weui-cell__hd">
+            <radio value="{{item.id}}" checked="true"/>
+          </view>
+          <view class="weui-cell__bd">{{item.createtime}}</view>
+          <view class="weui-cell__bd">{{item.name}}</view>
+        </label>
+      </radio-group>
+
+
     </view>    
 
-
+   <View class="zhengwen">
+    ⚠️注意:一次只能删除一个计划，若想删除多个计划，只需多次重复
+   </View>
   </view>
-
-
-
-
-
+</view>
+<view class="btm_tool">
+      <view class="tool_item btn_cart">
+        删除已选中的计划
+    <button class="btn1" bindtap="delete"></button>
+  </view>
+    </view>
 
 </view>
-</view>
+
+
+
+

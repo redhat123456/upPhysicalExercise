@@ -7,6 +7,8 @@ Page({
   data: {
     jihuajianjie:'',
     ri:'',
+    cover:'',
+    name:'',
     items: [
       {value: '1', name: '星期一', checked: 'true'},
       {value: '2', name: '星期二', checked: 'true'},
@@ -51,21 +53,31 @@ Page({
     console.log(items);
   },
   jihua() {
+    let ri="";
     console.log('点击事件');
     for(let i = 0,lenI = this.data.items.length;i < lenI; i++){
       if(this.data.items[i].checked==true){
-        console.log(this.data.ri);
+        console.log(ri);
         console.log(this.data.items[i])
-        this.data.ri= this.data.ri+this.data.items[i].value
-
+        ri= ri+this.data.items[i].value
       }
     }
-    console.log(this.data.ri);
+    if(ri=="")
+    ri="1234567";
+    console.log(ri);
+    
     wx.request({
-      url: 'url',
-      data:{},
-      method:"",
+      url: getApp().globalData.myurl+'/plan/addPlan',
+      data:{
+        "cover": this.data.cover,
+        "date":  ri,
+        "extent": "",
+        "name": this.data.name,
+        "openid": wx.getStorageSync("openid"),
+      },
+      method:"POST",
       success:function(res){
+
 
      wx.showToast({
       title: '计划制定成功',
@@ -84,23 +96,18 @@ Page({
     })
    
   },
-  shoucang:function() {
-    wx.showToast({
-      title: '计划收藏成功',
-      icon: 'success',
-      duration: 2000 ,
-      success: function () {
-        setTimeout(function () {
-       /*加入收藏事件*/
-        }, 3000);
-       }
-    })
-  },
+  
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
 
+ 
+  onLoad: function (options) {
+    
+  this.setData({
+    name:options.name,
+    cover:options.cover,
+  })
   },
 
   /**
