@@ -100,3 +100,16 @@ page {
   font-size: 32rpx;
 }
 
+
+.divider {
+  display: block;
+  align-self: center;
+  width: 100%;
+  color: #000000;
+  size: 10;
+}
+
+
+.header {    font-size: large;    color: black;  
+  margin-top: 12rpx; 
+}

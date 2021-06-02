@@ -9,7 +9,8 @@
     
     <view class="zhengwen">⚠️注意:点击结束后，将会上传数据
     </view>
-
+    <view class="zhengwen"><image class="tu" mode="widthFix" src="{{image_url}}"></image>每次跑步公里数({{meters}}公里/1.00公里)
+    </view>
     <text>\n里程数：{{meters}}km</text>
     <text>\n\n时间：{{time}}</text>
 </view>

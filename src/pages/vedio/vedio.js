@@ -8,7 +8,7 @@ Page({
     date:'',
     url:'',
     id:'',
-    id1:'',
+    planId:'',
     count:'',
     currentIndex:0,
     showChannels:true,
@@ -41,19 +41,34 @@ Page({
   onLoad: function (options) {
     console.log(options)
     let id=options.id;
+    let planId=options.id1;
     let url = unescape(options.url)
     console.log(url)
       this.setData({
         url:url,
         id:options.id,
+        planId:options.id1,
+        date:options.date,
       })
-
       if(id!=undefined)
     this.getVedio1();
-    
-    
+    this.daka();
   },
   
+  daka:function(){
+    var myurl = getApp().globalData.myurl + '/plan/doTSign/'+this.data.planId + '/' + this.data.date;
+    console.log(myurl);
+    wx.request({
+      url: myurl,
+      data:{},
+      method:"GET",
+      success:(res)=>{
+      console.log("打卡成功");
+      }
+    })
+  },
+
+
   getVedio1:function(){
     var that=this;
     wx.request({

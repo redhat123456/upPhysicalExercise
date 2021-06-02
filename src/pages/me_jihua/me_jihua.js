@@ -63,7 +63,7 @@ getlist:function(){
       for(let i = 0;i<list.length;i++){
         let check='false';
         console.log(i,list[i]);
-        if(i==0){
+        if(i==list.length-1){
         check='true'
         that.setData({
           jihuaid:list[i].id

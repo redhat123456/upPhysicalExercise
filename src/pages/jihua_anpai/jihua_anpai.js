@@ -8,6 +8,7 @@ Page({
     jihuajianjie:'',
     ri:'',
     cover:'',
+    res:'',
     name:'',
     items: [
       {value: '1', name: '星期一', checked: 'true'},
@@ -65,7 +66,56 @@ Page({
     if(ri=="")
     ri="1234567";
     console.log(ri);
-    
+        
+        var that = this
+        var ans = that.data.res
+        var jihua = that.data.name
+        console.log(ans)
+        if(ans==0){
+          //用户无任何计划
+          this.get_jihau(ri);
+        }    
+
+        if(ans==1){ 
+          //有跑步计划无普通计划
+          if(jihua=='跑步训练'){
+            wx.showToast({
+              title: '请先完成或删除现有的锻炼计划',
+              icon: 'none',
+              duration: 3000 ,
+            })
+          }
+          else{
+            this.get_jihau(ri);
+          }
+        }
+       
+        if(ans==2){
+         //普通计划有跑步计划
+         wx.showToast({
+          title: '请先完成或删除现有的锻炼计划',
+          icon: 'none',
+          duration: 3000 ,
+        })
+        }
+        if(ans==3){
+         //有普通计划无跑步计划
+         if(jihua!='跑步训练'){
+          wx.showToast({
+            title: '请先完成或删除所有的锻炼和跑步计划',
+            icon: 'none',
+            duration: 3000 ,
+          })
+         }
+          else{
+            this.get_jihau(ri);
+          }
+        }
+  },
+
+
+  get_jihau:function(ri){
+    console.log(ri);
     wx.request({
       url: getApp().globalData.myurl+'/plan/addPlan',
       data:{
@@ -77,24 +127,41 @@ Page({
       },
       method:"POST",
       success:function(res){
-
-
      wx.showToast({
       title: '计划制定成功',
       icon: 'success',
       duration: 2000 ,
-      success: function () {
+       success: function () {
 
         setTimeout(function () {
-        wx.reLaunch({
-        url: '/pages/jihua/jihua',
-          })
-        }, 1000);
-       }
+         wx.reLaunch({
+         url: '/pages/jihua/jihua',
+           })
+         }, 1000);
+        }
     })
       }
     })
+  },
+
+  Get_state:function(){
+  wx.request({
+    url: getApp().globalData.myurl + '/plan/isPlan/' + wx.getStorageSync("openid") ,
+    data:{},
+    method:"GET",
+    success:(res)=>{
+      console.log(res)
+      var state = res.data.data.res;
+      var that = this ;
+      that.setData({
+        res:state
+      })
+    }
+  })
+  },
+  create:function(){
    
+
   },
   
   /**
@@ -103,8 +170,9 @@ Page({
 
  
   onLoad: function (options) {
-    
-  this.setData({
+    var that = this;
+    that.Get_state();
+    that.setData({
     name:options.name,
     cover:options.cover,
   })
@@ -121,7 +189,9 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    var that =this;
+    that.Get_state();
+    
   },
 
   /**

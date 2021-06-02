@@ -2,7 +2,7 @@
 
 
 <view style="width: 90%;height:600rpx;overflow:hidden;margin: 0 auto 40rpx;">
-  <calendar  calendar-style="calendar"  header-style="calendar-header"  board-style="calendar-board" days-color="{{dayStyle}}" weeks-type="cn"  />
+  <calendar  calendar-style="calendar"  header-style="header"  next="{{false}}" prev="{{false}}" board-style="calendar-board" days-color="{{dayStyle}}" weeks-type="cn"/>
 </view>
 
 
@@ -37,7 +37,7 @@
             <!-- 右侧 完成量容器 -->
             <view class="goods_info_wrap">
               <view class="goods_name">{{item.name}}</view>
-              <view class="goods_price">已完成：{{item.progress}}/{{item.extent}}</view>
+              <view class="goods_price">已完成：{{item.progress-1}}/{{item.extent}}</view>
             </view>
           
           </navigator>
@@ -45,7 +45,7 @@
 
     <view class="first_tab">
       
-      <navigator class="goods_item"
+      <view class="goods_item"
       wx:for="{{jihuaList1}}"
       wx:key="id"
       wx:if="{{item.name=='30分钟系列'||item.name=='45分钟系列'||item.name=='新手入门'}}"
@@ -59,17 +59,44 @@
           <view class="goods_info_wrap">
             <view class="goods_name">{{item.firstClassification}}</view>
             <view class="goods_name">{{item.name}}</view>
-            <view class="goods_price">已完成：{{item.progress}}/{{item.extent}}</view>
+            <view class="goods_price">已完成：{{item.progress-1}}/{{item.extent}}</view>
           </view>
         
-        </navigator>
+        </view>
   </view>    
 
-    
+
+  <view class="divider">
+  </view>
+
+  <view class="first_tab">
+
+ 
+  
+    <navigator class="goods_item"
+        wx:for="{{vedio_List}}"
+        wx:key="id"
+        url="/pages/vedio/vedio?url={{item.url}}&id1={{item.planId}}&date={{date}}"
+        >
+
+            <!-- 左侧 视频容器 -->
+            <view class="goods_img_wrap">
+              <image mode="widthFix" src="{{item.cover}}"></image>
+            </view>
+            <!-- 右侧 视频容器 -->
+            <view class="goods_info_wrap">
+              <view class="goods_name">{{item.name}}</view>
+              <view class="goods_price">播放量：{{item.count}}</view>
+            </view>
+          </navigator>
+
+          </view>
 
   <button  bindtap="handleShowAction" type="primary" class="btn">新增训练计划</button>
   </view>
 
+
+<view></view>
 </view>
 </view>
 

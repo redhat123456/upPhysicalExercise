@@ -244,3 +244,8 @@ checkbox, radio{
   margin-top: 30rpx;
   text-align: center ;
 }
+
+.tu {
+  width: 50rpx;
+  text-align:center
+}

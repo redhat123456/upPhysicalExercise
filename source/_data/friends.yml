@@ -1,0 +1,118 @@
+- group:  基地的大佬们 # 分组标题
+  description:  位于桂林某养牛基地的大佬们(不分先后) # 分组描述
+  items:
+   
+
+    - title: MrGo123 # 名称     何壮艺
+      avatar: https://cdn.jsdelivr.net/gh/MrGo123/asset/headPortrait/mybloghp.jpg # 头像
+      url: https://zy68.top/ # 链接
+      screenshot: https://7.dusays.com/2021/03/20/f60343cf7cfcf.png # 截图
+      keywords:  # 关键词
+      description: 后端工程师 # 描述
+
+    - title: yww # 名称    陈皓
+      avatar: https://github.com/jaslli.png # 头像
+      url: https://yww52.com/ # 链接
+      screenshot: https://7.dusays.com/2021/03/20/f881b2160d4f0.png # 截图
+      keywords:  # 关键词
+      description: 三次元工程师 # 描述
+
+
+    - title: yeshan333 # 名称    叶汕
+      avatar: https://github.com/yeshan333.png # 头像
+      url: https://shansan.top # 链接
+      screenshot: https://7.dusays.com/2021/03/20/f3acc83c335c7.png # 截图
+      keywords:  # 关键词
+      description: 玄学爱好者&摸🐟大师，资深混子 # 描述
+
+  
+    - title: lvlv # 名称    吕少梅
+      avatar: https://lvshaomei.github.io/images/banner/labia.jpeg # 头像
+      url: https://lvshaomei.github.io/ # 链接
+      screenshot: https://7.dusays.com/2021/03/20/1811301ca828c.png # 截图
+      keywords:  # 关键词
+      description: Web前端大师 # 描述
+
+    - title: suze # 名称   梁坤
+      avatar: https://picture.suze666.top/images/2020/02/20/22da933f1a91d0a482256d0a88440337.jpg # 头像
+      url: https://suze666.top/ # 链接
+      screenshot: https://7.dusays.com/2021/03/20/a774321da45e8.png # 截图
+      keywords:  # 关键词
+      description: 大数据开发 # 描述
+
+
+    - title: qshzzt # 名称  李冰冰
+      avatar: https://7.dusays.com/2021/03/20/621fa36991c17.jpg # 头像
+      url: http://qshzzt.com # 链接
+      screenshot: https://7.dusays.com/2021/03/20/c9218c8383489.png # 截图
+      keywords:  # 关键词
+      description: 前端开发者 # 描述
+
+
+    - title: five9523 # 名称  覃昌伟
+      avatar: http://121.196.145.60:5120/uploads/big/5e65075925b11bd6ac0b4627ee1d5a32.jpg # 头像
+      url: https://five9523.github.io/# 链接
+      screenshot: https://7.dusays.com/2021/03/20/b39f4803564d8.png # 截图
+      keywords:  # 关键词
+      description: 端茶倒水工程师 # 描述
+
+    - title: Higgins # 名称    韦宇敬
+      avatar: https://i.loli.net/2020/07/31/QLmPF47aCS8sYGf.jpg # 头像
+      url: https://higgins995.top/ # 链接
+      screenshot: https://7.dusays.com/2021/03/20/e423d5779635e.png # 截图
+      keywords:  # 关键词
+      description: 运维开发 # 描述
+
+    - title: Bindow # 名称    张湃
+      avatar: https://7.dusays.com/2021/03/20/b29d1f0ad01eb.jpg # 头像
+      url: https://bindow.top/ # 链接
+      screenshot: https://7.dusays.com/2021/03/20/ac0c5bd5783bb.png # 截图
+      keywords:  # 关键词
+      description: 数学强者 # 描述
+    
+    - title: visualDust # 名称    宫照庭
+      avatar: https://7.dusays.com/2021/05/06/4a7ce9ad6d96b.png # 头像
+      url: https://ml.akasaki.space/ # 链接
+      screenshot: 
+      keywords:  # 关键词
+      description: 游戏开发 # 描述
+    
+
+- group:  互联网上的的大佬们 # 分组标题
+  description:   # 分组描述
+  items:
+  
+
+     - title: Yue -plus # 名称
+       avatar: https://avatars.githubusercontent.com/u/33195150?s=460&u=8ad6a5fe9b418292a1b52a7554a5ed3e0e112ac1&v=4 # 头像
+       url: https://yueplus.ink/ # 链接
+       screenshot: https://7.dusays.com/2021/03/20/01139cdbbe1f9.png # 截图
+       keywords:  # 关键词
+       description: hexo主题开发者 # 描述
+
+     - title: W4J1e's blog
+       avatar: https://cdn.hin.cool/pic/my/dl3.png
+       url: https://www.hin.cool
+       screenshot: https://gitee.com/W4j1e/pic/raw/master/img/sc.jpg 
+       description: 总是偏爱不务正业
+
+     - title: Muggledy’s Blog
+       url: https://muggledy.top/
+       avatar: https://cdn.jsdelivr.net/gh/celestezj/ImageHosting@v0.1/img/20210207093620.ico
+       screenshot: https://cdn.jsdelivr.net/gh/celestezj/ImageHosting/img/20210318153848.png
+       description: 好好学习，天天向上 
+
+     - title: Barret李靖
+       url: https://www.barretlee.com/
+       avatar: https://7.dusays.com/2021/04/19/d63042a550ee3.png
+       screenshot: 
+       description: 小胡子哥，一个有趣的灵魂
+
+     - title: 麋鹿鲁哟
+       url: https://www.cnblogs.com/miluluyo/
+       avatar: https://7.dusays.com/2021/05/05/ab9a49481114c.jpg
+       screenshot: 
+       description: 大道至简，知易行难。
+
+
+      

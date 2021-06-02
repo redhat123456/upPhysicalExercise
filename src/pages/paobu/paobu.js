@@ -72,8 +72,10 @@ function fill_zero_prefix(num) {
 
 Page({
   data: {
+    ans:0,
     date:'',
     clock: '',
+    image_url:'/images/错误.png',
     isLocation:false,
     id:'',
     latitude: 0,
@@ -99,13 +101,13 @@ Page({
       meters: 0.00,
       time: "0:00:00"
     })
-    this.daka();
+ 
   },
   //****************************
   openLocation:function (){
     wx.getLocation({
-      type: 'gcj02', // 默认为 wgs84 返回 gps 坐标，gcj02 返回可用于 wx.openLocation 的坐标
-      success: function(res){
+      type: "gcj02", // 默认为 wgs84 返回 gps 坐标，gcj02 返回可用于 wx.openLocation 的坐标
+      success:(res)=>{
           wx.openLocation({
             latitude: res.latitude, // 纬度，范围为-90~90，负数表示南纬
             longitude: res.longitude, // 经度，范围为-180~180，负数表示西经
@@ -115,6 +117,11 @@ Page({
     })
   },
 
+
+  panduan:function(){
+    
+    
+  },
 
   daka:function(){
     var time = this.data.date;
@@ -155,6 +162,7 @@ punch_in:function(){
 
 },
  stopRun2:function () {
+ 
   starRun = 0;
   count_down(this);
   let Time=this.data.time;
@@ -173,19 +181,42 @@ punch_in:function(){
       "updatetime": ""
     },
     method:"POST",
-    success:function(){
+    success:(res)=>{
       wx.showToast({
         title: '跑步结束，上传成功',
         icon: 'success',
         duration: 3000 ,
-        success: function () {
-          setTimeout(function () {
-          wx.reLaunch({
-          url: '/pages/jihua/jihua',
-            })
-          }, 1000);
-         }
+          
       })
+  
+      KM = this.data.meters 
+          if(KM>=1.00){
+            this.daka();
+            setTimeout(function () {
+              wx.reLaunch({
+              url: '/pages/jihua/jihua',
+                })
+              }, 1000);
+             
+            
+          }
+          else{
+            wx.showToast({
+              title: '未达到打卡目标',
+              icon: 'error',
+              duration: 3000 ,
+            })
+            setTimeout(function () {
+              wx.reLaunch({
+              url: '/pages/jihua/jihua',
+                })
+              }, 1000);
+             
+          }
+          
+        
+         
+    
     },
     fail:function(){
       wx.showToast({
@@ -200,6 +231,8 @@ punch_in:function(){
 
   
   },
+
+
 //****************************
   updateTime:function (time) {
 
@@ -209,7 +242,6 @@ punch_in:function(){
     this.setData ({
       time : time,
     })
-
   },
 
 
@@ -218,8 +250,8 @@ punch_in:function(){
     var that = this
     wx.getLocation({
 
-      type: 'gcj02', // 默认为 wgs84 返回 gps 坐标，gcj02 返回可用于 wx.openLocation 的坐标
-      success: function(res){
+      type: "gcj02", // 默认为 wgs84 返回 gps 坐标，gcj02 返回可用于 wx.openLocation 的坐标
+      success:(res)=>{
         console.log("res----------")
         console.log(res)
 
@@ -227,7 +259,7 @@ punch_in:function(){
         var newCover = {
             latitude: res.latitude,
             longitude: res.longitude,
-            iconPath: '/resources/redPoint.png',
+            iconPath: "/images/redPoint.png",
           };
         var oriCovers = that.data.covers;
         
@@ -260,6 +292,7 @@ punch_in:function(){
 
         oriCovers.push(newCover);
         
+
         that.setData({
           latitude: res.latitude,
           longitude: res.longitude,

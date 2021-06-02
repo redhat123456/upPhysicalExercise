@@ -1,0 +1,16 @@
+- name: 更多
+  icon: fas fa-ellipsis-v
+  rows:
+    - name: 主题源码
+      url: https://github.com/volantis-x/hexo-theme-volantis/
+    - name: 更新日志
+      url: https://github.com/volantis-x/hexo-theme-volantis/releases/
+    - name: hr
+    - name: 有疑问？
+      rows:
+        - name: 看 FAQ
+          url: faqs/
+        - name: 看 本站源码
+          url: https://github.com/volantis-x/volantis-docs/
+        - name: 提 Issue
+          url: https://github.com/volantis-x/hexo-theme-volantis/issues/

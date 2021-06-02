@@ -9,6 +9,7 @@ Page({
    */
   data: {
     imgUrls: [],
+    day:0,
    indicatorDots: true,
    autoplay: true,
    interval: 5000,
@@ -109,6 +110,7 @@ Page({
     })
   },
 
+  
   getRequest_hot:function () {
     //发送网络请求获取列表
 
@@ -324,11 +326,30 @@ Page({
  })
  },
 
+
+ getday:function() {
+  wx.request({
+    url: getApp().globalData.myurl + '/user/getUsed/' +  wx.getStorageSync("openid"),
+    data:{},
+    method:"GET",
+    success:(res)=>{
+    var that = this
+     var day = res.data.data.time
+     console.log(day)
+     that.setData({
+       day:day
+     })
+    }
+  })
+
+  },
+
  /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-   this.getRequest_lun();
+    this.getday();
+    this.getRequest_lun();
    this.getToday();
    this.getRequest_hot();
    this.getRequest_2();
@@ -339,6 +360,7 @@ Page({
    this.getRequest_7();
    this.getRequest_8();
    this.getRequest_9();   
+   
   },
 
 

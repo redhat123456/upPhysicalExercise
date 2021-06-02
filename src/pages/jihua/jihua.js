@@ -13,7 +13,8 @@ Page({
       jihuaurl:null,
       date:'',
       dayStyle: [],
-        jihuaList1:[],
+      jihuaList1:[],
+      vedio_List:[],
       
     },
     
@@ -84,17 +85,20 @@ Page({
    */
   calendar:function(res){
    console.log('显示计划调用');
+   var arr = new Array;
    wx.request({
-     url: getApp().globalData.myurl + '/plan/getIndexPlan/' + wx.getStorageSync("openid") +'/'+ this.data.date ,
+     url: getApp().globalData.myurl + '/plan/getIndexPlan2/' + wx.getStorageSync("openid") +'/'+ this.data.date ,
      data:{},
      method:"GET",
      success:(res)=>{
        console.log(res);
-       var list = res.data.data.list;
-       var arr = new Array(list.length);
-       var that = this;
+       var list =  res.data.data.list;
        console.log(list);
-       console.log(list[0]);
+       if(list == undefined){
+        this.setData({
+          dayStyle:{}
+        })
+      }
        for (let i = 0; i < list.length; i++){
         console.log(i, list[i]);
         let color;
@@ -124,27 +128,67 @@ Page({
         arr[i]=obj;
        }
       console.log(arr);
-
-      that.setData({
+      this.setData({
         dayStyle:arr
-       });
-    
+      })
 
      }
 
    })
 
   
+
+   
+     
+  
    },
 
+
+   
+   getVideoList:function(){
+      let myurl=getApp().globalData.myurl+'/video/getAllVideo/'+ wx.getStorageSync("openid")+'/'+this.data.date;
+      console.log(myurl);
+    wx.request({
+      url: myurl,
+      data:{},
+      method:"GET",
+      success:(res)=>{
+      console.log(res);
+      var list =  res.data.data.videoList;
+      var that = this
+      console.log(list);
+      if(list == undefined){
+        that.setData({
+          vedio_List:{}
+        })
+      }
+
+      for (let i = 0; i < list.length; i++) {
+        console.log(i, list[i]);
+        list[i].url=escape(list[i].url)
+        console.log(i, list[i]);
+      }
+      this.setData({
+        vedio_List:list
+      })
+      }
+    })
+
+
+  },
+   
   onLoad: function (options) {
     this.getdate();
     this.jihua_show2();  
     this.calendar();
-    
+    this.getVideoList();
 
   },
+  
 
+  changeData:function(){
+    this.onLoad();
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
@@ -156,10 +200,8 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-  
-    this.getdate();
-    this.jihua_show2();  
-    this.calendar();
+    this.onLoad();
+
   },
 
   /**
