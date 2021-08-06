@@ -1,4 +1,4 @@
-# upPhysicalExercise(up体能训练<前端部分>)
+# 🚀upPhysicalExercise(up体能训练<前端部分>)
 
 ⚠️ 此项目还有待更新，不是最终版本
 
